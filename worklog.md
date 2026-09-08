@@ -23,3 +23,22 @@ Stage Summary:
 - Brand: CSA Kenya navy/cyan/gold per csakenya.org; simplistic modern aesthetic
 - Data: 12/12 verified champions; zero hallucinated personal data
 - All core flows browser-verified end-to-end
+
+---
+Task ID: 2
+Agent: Super Z (main agent)
+Task: Re-center the build as a PORTFOLIO OF THE 12 YACs (per user correction: "we're not building a website, we're building a portfolio for those 12 YACs")
+
+Work Log:
+- Reframed all copy from institutional-website tone to champion-portfolio tone: layout.tsx metadata ("YAC Digital Portfolio — The 12 Youth Advocacy Champions"), Navbar brand ("YAC Digital Portfolio / 12 Youth Advocacy Champions", links The Portfolio / The 12 Champions, CTA "Work With the 12"), Footer brand block + explore links
+- Hero: eyebrow "YAC Digital Portfolio • 12 Champions", headline "The portfolio of 12 Youth Advocacy Champions...", paragraph "Twelve verified young leaders. Twelve working portfolios...", CTAs "Explore the Portfolios" / "Work With the Champions"
+- NEW: Hero roster rail — all 12 champion headshots as overlapping clickable circles ("Open any of the 12 portfolios"); click opens that champion's full portfolio modal (Hero now takes onSelect prop, wired to shared selected state in page.tsx)
+- page.tsx: "Who We Are" → "The Portfolio" (Twelve portfolios. One cohort...), team section → "The 12 Portfolios" ("Every card is a champion's portfolio"), engage section → "Work with the YACs / Put twelve verified youth skill sets to work where policy happens", CTA "Work With the Champions"
+- EngageDrawer: title "Work With the Champions", description "Bring one or more of the 12 YACs into your next evidence sprint"
+- Note: per skill constraint (only / route is user-visible), per-champion access is delivered via roster rail + portfolio modal instead of /champions/[id] routes
+- Verified: bun lint clean; agent-browser — hero, roster rail renders 12 avatars, roster click → Irene Alma modal, team section label, engage section, footer, mobile 390px cards; zero console errors; dev.log clean (GET 200)
+
+Stage Summary:
+- Deliverable: YAC Digital Portfolio fully re-centered on the 12 YACs — every entry point (nav, hero roster, cards, table, footer) opens an individual champion portfolio
+- Framing is now unambiguous: portfolio OF the 12 champions; org/lab references kept only as attribution (CSA Kenya • INSPIRE Lab)
+- All core flows re-verified end-to-end after refactor

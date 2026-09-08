@@ -6,8 +6,8 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 const LINKS = [
   { href: '#home', label: 'Home' },
-  { href: '#about', label: 'Who We Are' },
-  { href: '#team', label: 'The Team' },
+  { href: '#about', label: 'The Portfolio' },
+  { href: '#team', label: 'The 12 Champions' },
   { href: '#footprint', label: 'Footprint' },
   { href: '#engage', label: 'Engage' },
   { href: '#contact', label: 'Contact' },
@@ -43,10 +43,10 @@ export function Navbar({ onEngage }: { onEngage: () => void }) {
           </span>
           <span className="leading-tight">
             <span className={`block text-[13px] font-extrabold tracking-tight ${scrolled ? 'text-navy' : 'text-white'}`}>
-              Youth Evidence-to-Policy
+              YAC Digital Portfolio
             </span>
             <span className={`block text-[10px] font-semibold uppercase tracking-[0.14em] ${scrolled ? 'text-csa-600' : 'text-white/70'}`}>
-              CSA Kenya • INSPIRE Lab
+              12 Youth Advocacy Champions
             </span>
           </span>
         </a>
@@ -69,7 +69,7 @@ export function Navbar({ onEngage }: { onEngage: () => void }) {
             size="sm"
             className="ml-3 rounded-full bg-gold font-bold text-navy shadow-sm hover:bg-gold-600 hover:text-navy"
           >
-            Commission a Sprint
+            Work With the 12
             <ArrowUpRight className="ml-1 h-3.5 w-3.5" />
           </Button>
         </div>
@@ -105,7 +105,7 @@ export function Navbar({ onEngage }: { onEngage: () => void }) {
             }}
             className="mt-2 w-full rounded-full bg-gold font-bold text-navy hover:bg-gold-600 hover:text-navy"
           >
-            Commission an Evidence Sprint
+            Work With the Champions
           </Button>
         </div>
       )}

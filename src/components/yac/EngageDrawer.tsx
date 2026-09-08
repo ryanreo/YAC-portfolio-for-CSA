@@ -77,7 +77,7 @@ export function EngageDrawer({
       });
       if (!res.ok) throw new Error('Request failed');
       setDone(true);
-      toast.success('Inquiry received — the CSA Kenya lab team will reach out shortly.');
+      toast.success('Inquiry received — the CSA Kenya team will reach out shortly.');
       setName('');
       setOrg('');
       setEmail('');
@@ -96,10 +96,10 @@ export function EngageDrawer({
       <SheetContent side="right" className="w-full overflow-y-auto sm:max-w-md">
         <SheetHeader className="px-5 pt-6">
           <SheetTitle className="text-xl font-extrabold tracking-tight text-navy">
-            Commission an Evidence Sprint
+            Work With the Champions
           </SheetTitle>
           <SheetDescription className="text-sm leading-relaxed text-slate-500">
-            Partner with the INSPIRE-Kenya Youth Evidence to Policy Lab. Tell us what youth evidence
+            Bring one or more of the 12 YACs into your next evidence sprint. Tell us what youth evidence
             you need and our focal points — Rukia Nzibo &amp; Sandra Washika — will respond with a scope.
           </SheetDescription>
         </SheetHeader>

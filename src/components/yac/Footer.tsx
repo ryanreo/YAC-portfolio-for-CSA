@@ -18,16 +18,16 @@ export function Footer({ onEngage }: { onEngage: () => void }) {
                 YAC
               </span>
               <div className="leading-tight">
-                <p className="text-sm font-extrabold">Youth Evidence-to-Policy Lab</p>
+                <p className="text-sm font-extrabold">YAC Digital Portfolio</p>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
-                  Digital Portfolio
+                  12 Youth Advocacy Champions
                 </p>
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-300">
-              An initiative of the Centre for the Study of Adolescence (CSA Kenya) under the
-              INSPIRE-Kenya Youth Evidence to Policy Lab — showcasing verified youth champions
-              driving sub-national policy change across five counties.
+              The shared portfolio of the 12 YACs — an initiative of the Centre for the Study of Adolescence
+              (CSA Kenya) under the INSPIRE-Kenya Youth Evidence to Policy Lab, showcasing verified young
+              champions driving sub-national policy change across five counties.
             </p>
             <p className="mt-4 flex items-center gap-2 text-xs font-medium text-slate-400">
               <ShieldCheck className="h-4 w-4 text-gold" aria-hidden="true" />
@@ -40,10 +40,10 @@ export function Footer({ onEngage }: { onEngage: () => void }) {
             <h3 className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-gold">Explore</h3>
             <ul className="mt-4 space-y-2.5 text-sm">
               {[
-                ['#about', 'Who We Are'],
-                ['#team', 'The Team'],
+                ['#about', 'The Portfolio'],
+                ['#team', 'The 12 Champions'],
                 ['#footprint', 'County Footprint'],
-                ['#engage', 'Commission a Sprint'],
+                ['#engage', 'Work With the YACs'],
               ].map(([href, label]) => (
                 <li key={href}>
                   <a href={href} className="text-slate-300 transition-colors hover:text-white">

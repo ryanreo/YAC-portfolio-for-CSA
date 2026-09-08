@@ -2,10 +2,16 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { COHORT_STATS } from '@/lib/yac';
+import { CHAMPIONS, COHORT_STATS, type YACProfile } from '@/lib/yac';
 import { ArrowDown, ShieldCheck, Users, MapPin, Cake, TrendingUp } from 'lucide-react';
 
-export function Hero({ onEngage }: { onEngage: () => void }) {
+export function Hero({
+  onEngage,
+  onSelect,
+}: {
+  onEngage: () => void;
+  onSelect: (c: YACProfile) => void;
+}) {
   return (
     <section id="home" className="relative overflow-hidden bg-navy text-white">
       {/* Decorative grid + glows */}
@@ -27,17 +33,17 @@ export function Hero({ onEngage }: { onEngage: () => void }) {
           <div className="fade-up">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-cyan-200 ring-1 ring-white/15">
               <ShieldCheck className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
-              INSPIRE-Kenya • Youth Evidence to Policy Lab
+              YAC Digital Portfolio • 12 Champions
             </p>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.06] tracking-tight sm:text-5xl lg:text-[3.4rem]">
-              12 Youth Advocacy Champions driving{' '}
+              The portfolio of 12 Youth Advocacy Champions driving{' '}
               <span className="relative text-gold sm:whitespace-nowrap">
                 sub-national change
               </span>{' '}
               across Kenya
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              An interactive portfolio of verified young leaders — spanning legal reform, GIS &amp; spatial data,
+              Twelve verified young leaders. Twelve working portfolios — spanning legal reform, GIS &amp; spatial data,
               health communication, and grassroots mobilisation — turning frontline adolescent lived experience
               into evidence-based policy.
             </p>
@@ -48,7 +54,7 @@ export function Hero({ onEngage }: { onEngage: () => void }) {
                 className="rounded-full bg-csa px-6 font-bold text-white shadow-lg shadow-csa/30 hover:bg-csa-600"
               >
                 <a href="#team">
-                  Meet the Champions
+                  Explore the Portfolios
                   <ArrowDown className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -58,8 +64,53 @@ export function Hero({ onEngage }: { onEngage: () => void }) {
                 variant="outline"
                 className="rounded-full border-white/30 bg-transparent px-6 font-bold text-white hover:bg-white/10 hover:text-white"
               >
-                Commission an Evidence Sprint
+                Work With the Champions
               </Button>
+            </div>
+
+            {/* Roster rail — open any of the 12 portfolios */}
+            <div className="mt-9">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                Open any of the 12 portfolios
+              </p>
+              <div className="mt-3 flex flex-wrap items-center">
+                {CHAMPIONS.map((c, i) => {
+                  const initials = c.fullName
+                    .split(' ')
+                    .map((w) => w[0])
+                    .slice(0, 2)
+                    .join('');
+                  return (
+                    <button
+                      key={c.id}
+                      onClick={() => onSelect(c)}
+                      className={`group relative h-11 w-11 rounded-full transition-transform hover:z-10 hover:scale-110 focus-visible:z-10 sm:h-12 sm:w-12 ${
+                        i > 0 ? '-ml-2.5' : ''
+                      }`}
+                      aria-label={`Open portfolio of ${c.fullName}`}
+                      title={`${c.fullName} — ${c.county}`}
+                    >
+                      {c.headshotUrl ? (
+                        <Image
+                          src={c.headshotUrl}
+                          alt=""
+                          fill
+                          sizes="48px"
+                          className="rounded-full object-cover ring-2 ring-navy"
+                        />
+                      ) : (
+                        <span className="grid h-full w-full place-items-center rounded-full bg-csa text-xs font-extrabold text-white ring-2 ring-navy">
+                          {initials}
+                        </span>
+                      )}
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 rounded-full ring-0 ring-gold transition-all group-hover:ring-2 group-hover:ring-gold"
+                      />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Verification note */}
@@ -82,7 +133,7 @@ export function Hero({ onEngage }: { onEngage: () => void }) {
                 className="h-full w-full object-cover"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/95 via-navy/60 to-transparent p-5 pt-14">
-                <p className="text-sm font-bold">The Champion Cohort</p>
+                <p className="text-sm font-bold">The 12 YACs — Champion Cohort</p>
                 <p className="text-xs text-slate-300">Youth Evidence to Policy Lab • CSA Kenya convening</p>
               </figcaption>
             </figure>

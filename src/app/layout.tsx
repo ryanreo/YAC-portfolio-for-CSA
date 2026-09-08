@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Youth Evidence-to-Policy Digital Portfolio | CSA Kenya",
+  title: "YAC Digital Portfolio — The 12 Youth Advocacy Champions | CSA Kenya",
   description:
-    "Interactive showcase of 12 Youth Advocacy Champions driving sub-national change across Kenya — CSA Kenya • INSPIRE-Kenya Youth Evidence to Policy Lab.",
+    "The shared portfolio of the 12 YACs — Youth Advocacy Champions driving sub-national change across Kenya. Open each champion's verified portfolio — CSA Kenya • INSPIRE-Kenya Youth Evidence to Policy Lab.",
   keywords: [
     "CSA Kenya",
     "Youth Advocacy",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Centre for the Study of Adolescence (CSA Kenya)" }],
   openGraph: {
-    title: "Youth Evidence-to-Policy Digital Portfolio",
+    title: "YAC Digital Portfolio — The 12 Youth Advocacy Champions",
     description:
-      "12 Youth Advocacy Champions driving sub-national change across Kenya. Explore verified profiles, county footprint, and thematic expertise.",
+      "The portfolio of the 12 YACs: verified champion profiles, county footprint, and thematic expertise across Kenya.",
     siteName: "CSA Kenya — INSPIRE-Kenya Youth Evidence to Policy Lab",
     type: "website",
   },

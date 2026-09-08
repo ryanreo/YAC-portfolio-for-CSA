@@ -39,21 +39,22 @@ export default function Home() {
       <Navbar onEngage={() => openEngage()} />
 
       <main className="flex-1">
-        <Hero onEngage={() => openEngage()} />
+        <Hero onEngage={() => openEngage()} onSelect={setSelected} />
 
         {/* ── Who We Are ── */}
         <section id="about" className="scroll-mt-20 bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="section-label">Who We Are</p>
+              <p className="section-label">The Portfolio</p>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-                Authentic youth leadership, backed by multidisciplinary technical rigour
+                Twelve portfolios. One cohort of verified, county-anchored youth expertise
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-500">
-                The Youth Evidence-to-Policy Digital Portfolio transforms static Word biographies into an
-                interactive showcase of the INSPIRE-Kenya champion cohort. 75% of champions are aged 21–26,
-                bridging frontline adolescent lived experience with legal, spatial GIS, and health expertise —
-                so donors and county directorates can find — and fund — the exact evidence capacity they need.
+                The YAC Digital Portfolio turns twelve static biographies into a living showcase of the
+                INSPIRE-Kenya champion cohort. 75% of the 12 YACs are aged 21–26, each bridging frontline
+                adolescent lived experience with legal, spatial GIS, and health expertise — and every profile
+                here is a working portfolio, so donors and county directorates can find — and fund — the exact
+                evidence capacity they need.
               </p>
             </div>
 
@@ -95,13 +96,14 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div className="max-w-2xl">
-                <p className="section-label">The Team</p>
+                <p className="section-label">The 12 Portfolios</p>
                 <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
                   Meet the {CHAMPIONS.length} champions
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-slate-500">
-                  Search across names, counties, ages, institutions, and skills — or filter by thematic
-                  pillar. Open any profile for a deep-dive into competencies and affiliations.
+                  Every card is a champion&apos;s portfolio. Search across names, counties, ages,
+                  institutions, and skills — or filter by thematic pillar — then open any profile for a
+                  deep-dive into competencies and affiliations.
                 </p>
               </div>
               <Button
@@ -163,14 +165,15 @@ export default function Home() {
                 <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-csa/30 blur-[100px]" />
                 <div className="relative max-w-2xl">
                   <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-cyan-200 ring-1 ring-white/15">
-                    Why fund this lab
+                    Work with the YACs
                   </p>
                   <h2 className="mt-5 text-3xl font-extrabold tracking-tight sm:text-4xl">
-                    Donors don&apos;t fund lists of names — they fund capacity, evidence &amp; scalability
+                    Put twelve verified youth skill sets to work where policy happens
                   </h2>
                   <p className="mt-4 text-sm leading-relaxed text-slate-300 sm:text-base">
-                    Commission a technical sprint with the champions. Each engagement is scoped with CSA
-                    Kenya&apos;s lab focal points and delivered through county-anchored youth expertise.
+                    Bring one or more of the 12 champions into your next evidence sprint. Each engagement
+                    is scoped with CSA Kenya&apos;s lab focal points and delivered through county-anchored
+                    youth expertise.
                   </p>
                 </div>
 
@@ -202,7 +205,7 @@ export default function Home() {
                     size="lg"
                     className="rounded-full bg-gold px-7 font-bold text-navy shadow-lg shadow-gold/20 hover:bg-gold-600 hover:text-navy"
                   >
-                    Commission an Evidence Sprint
+                    Work With the Champions
                   </Button>
                 </div>
               </div>
