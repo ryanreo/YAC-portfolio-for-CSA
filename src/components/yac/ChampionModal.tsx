@@ -9,7 +9,6 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PILLAR_SHORT, type YACProfile } from '@/lib/yac';
 import {
@@ -20,18 +19,15 @@ import {
   Building2,
   Wrench,
   Cake,
-  FileText,
   Handshake,
 } from 'lucide-react';
 
 export function ChampionModal({
   champion,
   onClose,
-  onEngage,
 }: {
   champion: YACProfile | null;
   onClose: () => void;
-  onEngage: (champion: YACProfile) => void;
 }) {
   const initials = champion
     ? champion.fullName
@@ -195,20 +191,6 @@ export function ChampionModal({
                   ))}
                 </ul>
               </section>
-
-              {/* CTA */}
-              <div className="flex flex-col gap-2 rounded-2xl bg-navy p-4 sm:flex-row sm:items-center sm:justify-between">
-                <p className="flex items-center gap-2 text-xs font-semibold text-slate-300">
-                  <FileText className="h-4 w-4 text-gold" aria-hidden="true" />
-                  Engage this champion for a policy working group or evidence brief.
-                </p>
-                <Button
-                  onClick={() => onEngage(champion)}
-                  className="shrink-0 rounded-full bg-gold font-bold text-navy hover:bg-gold-600 hover:text-navy"
-                >
-                  Request Brief
-                </Button>
-              </div>
             </div>
           </div>
         )}

@@ -42,3 +42,20 @@ Stage Summary:
 - Deliverable: YAC Digital Portfolio fully re-centered on the 12 YACs — every entry point (nav, hero roster, cards, table, footer) opens an individual champion portfolio
 - Framing is now unambiguous: portfolio OF the 12 champions; org/lab references kept only as attribution (CSA Kenya • INSPIRE Lab)
 - All core flows re-verified end-to-end after refactor
+
+---
+Task ID: 3
+Agent: Super Z (main agent)
+Task: Reduce to a single Portfolio PAGE per user correction: "its just a Portfolio page no need to make it a full website"
+
+Work Log:
+- Rewrote src/app/page.tsx as one minimal portfolio page: navy top band (brand row + "The 12 YACs — Youth Advocacy Champions of Kenya" intro + verification note) → grid of the 12 ChampionCards → one-line navy footer → ChampionModal deep-dive
+- Deleted full-website machinery: Navbar, Hero (with stats strip + roster rail), KenyaMap + footprint section, TeamSection (search/filters/table), EngageDrawer + inquiry form, Footer, /api/inquiries route; removed Toaster/Sonner from layout (no toasts remain)
+- Slimmed ChampionModal: removed onEngage prop and "Request Brief" commission CTA; modal is now a pure portfolio deep-dive (bio, academic, competencies, pillars, affiliations)
+- Kept: ChampionCard, ChampionModal, data layer (12/12 verified), CSA Kenya palette (navy/cyan/gold)
+- Verified: bun lint clean; agent-browser — desktop 1440px (top band, 4-col grid, footer, Irene modal), mobile 390px (single-column cards), zero console errors, dev.log clean
+
+Stage Summary:
+- Deliverable is now a single Portfolio page for the 12 YACs — no multi-section website chrome
+- Page = intro + 12 champion portfolio cards + modal deep-dives + one-line footer
+- All flows re-verified end-to-end
