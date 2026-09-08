@@ -1,0 +1,23 @@
+// Prisma schema for the YAC Digital Portfolio
+// Stores "Commission an Evidence Sprint" partnership inquiries
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Inquiry {
+  id           String   @id @default(cuid())
+  name         String
+  organisation String?
+  email        String
+  sprintType   String
+  championId   String?
+  message      String?
+  status       String   @default("new")
+  createdAt    DateTime @default(now())
+}
