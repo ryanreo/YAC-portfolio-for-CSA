@@ -19,9 +19,9 @@ export function ChampionCard({
     .join('');
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-csa/40 hover:shadow-[0_16px_40px_-16px_rgba(0,43,73,0.25)]">
+    <article className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-csa/40 hover:shadow-[0_16px_40px_-16px_rgba(0,80,40,0.28)]">
       {/* Top: identity */}
-      <div className="relative bg-gradient-to-br from-navy via-navy-700 to-navy-600 px-5 pb-12 pt-6">
+      <div className="relative bg-gradient-to-br from-forest via-forest-700 to-forest-600 px-5 pb-12 pt-6">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -34,18 +34,18 @@ export function ChampionCard({
         <div className="relative flex items-start justify-between">
           <div className="flex items-center gap-2">
             <span className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white/90 ring-1 ring-white/15">
-              <MapPin className="h-3 w-3 text-csa" aria-hidden="true" />
+              <MapPin className="h-3 w-3 text-amber" aria-hidden="true" />
               {champion.county}
             </span>
             {champion.verified && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-gold/15 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-gold ring-1 ring-gold/30">
+              <span className="inline-flex items-center gap-1 rounded-full bg-amber/15 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-amber ring-1 ring-amber/30">
                 <ShieldCheck className="h-3 w-3" aria-hidden="true" />
                 Verified
               </span>
             )}
           </div>
           <span
-            className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gold text-sm font-extrabold text-navy ring-2 ring-white/25"
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-amber text-sm font-extrabold text-forest ring-2 ring-white/25"
             aria-hidden="true"
           >
             {champion.age}
@@ -81,12 +81,12 @@ export function ChampionCard({
 
       {/* Body */}
       <div className="flex flex-1 flex-col px-5 pb-5 pt-3 text-center">
-        <h3 className="text-base font-extrabold tracking-tight text-navy">{champion.fullName}</h3>
+        <h3 className="text-base font-extrabold tracking-tight text-forest">{champion.fullName}</h3>
         <p className="mt-1 text-xs font-semibold text-csa-600">{champion.primaryRole}</p>
 
         {champion.impactTagline && (
-          <p className="mt-3 flex items-start gap-1.5 rounded-xl bg-gold-50 p-2.5 text-left text-[11px] font-medium leading-relaxed text-navy/80">
-            <Quote className="mt-0.5 h-3 w-3 shrink-0 text-gold-600" aria-hidden="true" />
+          <p className="mt-3 flex items-start gap-1.5 rounded-xl bg-amber-50 p-2.5 text-left text-[11px] font-medium leading-relaxed text-forest/80">
+            <Quote className="mt-0.5 h-3 w-3 shrink-0 text-amber-600" aria-hidden="true" />
             {champion.impactTagline}
           </p>
         )}
@@ -99,7 +99,7 @@ export function ChampionCard({
             <Badge
               key={p}
               variant="secondary"
-              className="rounded-full border border-slate-200 bg-slate-csa px-2.5 py-0.5 text-[10px] font-bold text-navy/70"
+              className="rounded-full border border-slate-200 bg-slate-csa px-2.5 py-0.5 text-[10px] font-bold text-forest/70"
             >
               {PILLAR_SHORT[p]}
             </Badge>
@@ -109,7 +109,7 @@ export function ChampionCard({
         <div className="mt-auto pt-4">
           <button
             onClick={() => onSelect(champion)}
-            className="inline-flex items-center gap-1 text-xs font-extrabold text-csa-600 transition-colors hover:text-navy"
+            className="inline-flex items-center gap-1 text-xs font-extrabold text-csa-600 transition-colors hover:text-forest"
             aria-label={`Open full profile of ${champion.fullName}`}
           >
             View full profile

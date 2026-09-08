@@ -43,7 +43,7 @@ export function ChampionModal({
         {champion && (
           <div>
             {/* Header band */}
-            <div className="relative bg-gradient-to-br from-navy via-navy-700 to-navy-600 px-6 pb-16 pt-7 text-white sm:px-8">
+            <div className="relative bg-gradient-to-br from-forest via-forest-700 to-forest-600 px-6 pb-16 pt-7 text-white sm:px-8">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -54,7 +54,7 @@ export function ChampionModal({
               />
               <DialogHeader className="relative text-left">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <span className="relative mx-auto block h-28 w-28 shrink-0 overflow-hidden rounded-full ring-4 ring-gold/70 sm:mx-0">
+                  <span className="relative mx-auto block h-28 w-28 shrink-0 overflow-hidden rounded-full ring-4 ring-amber/70 sm:mx-0">
                     {champion.headshotUrl ? (
                       <Image
                         src={champion.headshotUrl}
@@ -73,20 +73,20 @@ export function ChampionModal({
                     <DialogTitle className="text-2xl font-extrabold tracking-tight">
                       {champion.fullName}
                     </DialogTitle>
-                    <DialogDescription className="mt-1 text-sm font-semibold text-cyan-200">
+                    <DialogDescription className="mt-1 text-sm font-semibold text-csa-50">
                       {champion.primaryRole}
                     </DialogDescription>
                     <div className="mt-3 flex flex-wrap justify-center gap-1.5 sm:justify-start">
                       <span className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ring-1 ring-white/15">
-                        <MapPin className="h-3 w-3 text-csa" aria-hidden="true" />
+                        <MapPin className="h-3 w-3 text-amber" aria-hidden="true" />
                         {champion.county} County
                       </span>
                       <span className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ring-1 ring-white/15">
-                        <Cake className="h-3 w-3 text-gold" aria-hidden="true" />
+                        <Cake className="h-3 w-3 text-amber" aria-hidden="true" />
                         {champion.age} years
                       </span>
                       {champion.verified && (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-gold/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-gold ring-1 ring-gold/30">
+                        <span className="inline-flex items-center gap-1 rounded-full bg-amber/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber ring-1 ring-amber/30">
                           <ShieldCheck className="h-3 w-3" aria-hidden="true" />
                           Data Verified
                         </span>
@@ -100,13 +100,13 @@ export function ChampionModal({
             {/* Body */}
             <div className="space-y-6 px-6 py-6 sm:px-8">
               {champion.impactTagline && (
-                <blockquote className="flex items-start gap-3 rounded-2xl border-l-4 border-gold bg-gold-50 p-4">
-                  <Quote className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" aria-hidden="true" />
+                <blockquote className="flex items-start gap-3 rounded-2xl border-l-4 border-amber bg-amber-50 p-4">
+                  <Quote className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" aria-hidden="true" />
                   <div>
-                    <p className="text-sm font-bold leading-relaxed text-navy">
+                    <p className="text-sm font-bold leading-relaxed text-forest">
                       &ldquo;{champion.impactTagline}&rdquo;
                     </p>
-                    <cite className="mt-1 block text-[10px] font-bold uppercase tracking-[0.14em] text-gold-600 not-italic">
+                    <cite className="mt-1 block text-[10px] font-bold uppercase tracking-[0.14em] text-amber-600 not-italic">
                       Lived Experience → Policy Impact
                     </cite>
                   </div>
@@ -133,7 +133,7 @@ export function ChampionModal({
                   <h4 className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-csa-600">
                     Academic Background
                   </h4>
-                  <p className="mt-1 text-sm font-semibold text-navy">{champion.academicBackground}</p>
+                  <p className="mt-1 text-sm font-semibold text-forest">{champion.academicBackground}</p>
                 </div>
               </section>
 
@@ -147,7 +147,7 @@ export function ChampionModal({
                   {champion.skillsAndTools.map((s) => (
                     <Badge
                       key={s}
-                      className="rounded-full bg-navy px-3 py-1 text-[11px] font-bold text-white hover:bg-navy-700"
+                      className="rounded-full bg-forest px-3 py-1 text-[11px] font-bold text-white hover:bg-forest-700"
                     >
                       {s}
                     </Badge>
@@ -183,9 +183,9 @@ export function ChampionModal({
                   {champion.affiliations.map((a) => (
                     <li
                       key={a}
-                      className="flex items-start gap-2 rounded-xl bg-slate-csa px-3 py-2 text-xs font-medium leading-snug text-navy/80"
+                      className="flex items-start gap-2 rounded-xl bg-slate-csa px-3 py-2 text-xs font-medium leading-snug text-forest/80"
                     >
-                      <Handshake className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-600" aria-hidden="true" />
+                      <Handshake className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-600" aria-hidden="true" />
                       {a}
                     </li>
                   ))}

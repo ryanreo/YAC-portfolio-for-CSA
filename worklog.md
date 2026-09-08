@@ -59,3 +59,22 @@ Stage Summary:
 - Deliverable is now a single Portfolio page for the 12 YACs — no multi-section website chrome
 - Page = intro + 12 champion portfolio cards + modal deep-dives + one-line footer
 - All flows re-verified end-to-end
+
+---
+Task ID: 4
+Agent: Super Z (main agent)
+Task: Apply CSA Kenya header color scheme (user image) + exact Kenya map outline from Stitch template (user zip)
+
+Work Log:
+- Sampled exact colors from user's csakenya.org header image: maroon top bar #AA475A, logo greens #005028→#169556, amber active link #F0A032, charcoal text #2C2C2C
+- Extracted stitch_editorial_minimalist_portfolio.zip (Atelier Editorial); its Kenya map is a raster satellite image with HTML pin overlays — downloaded the exact image to public/kenya/field-nodes.jpg (512x279, East Africa with Kenya outline + city lights)
+- globals.css: replaced navy/cyan/gold tokens with CSA palette — forest #005028/#0a6238/#147546, csa #14954f/#0f7a40/#e6f4ec, maroon #aa475a/#8f3a4b/#f7e9ec, amber #f0a032/#d1881f/#fdf3e2; updated :root vars, selection, scrollbar, focus ring, section-label
+- Renamed token usages navy→forest, gold→amber across ChampionCard/ChampionModal; tweaked cyan-200→csa-50, pin icons→amber, card hover shadow→green
+- page.tsx: maroon top strip (CSA signature), white CSA-style header (green brand, charcoal headline with green span, amber icons), cards section, NEW footprint section, forest footer
+- NEW KenyaFootprint.tsx: template-style dark panel (#0c1613) with exact map image, glowing county pins (Nairobi = green hub node, others amber; counts computed from data), coordinate tag, forest side panel listing 5 counties with notes + counts
+- Verified: lint clean; browser — top band, map pins/labels/counts, Tonny modal (forest/amber), mobile 390px; zero console errors; dev.log clean
+
+Stage Summary:
+- Palette now exactly matches csakenya.org header: maroon #AA475A, green #14954F/#005028, amber #F0A032 on white
+- Kenya outline is the template's exact map image (same asset), with pins for the 12 YACs' 5 counties
+- Single portfolio page structure preserved; all flows re-verified

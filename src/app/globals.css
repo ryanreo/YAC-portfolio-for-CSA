@@ -42,52 +42,55 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  /* ── CSA Kenya institutional brand (csakenya.org) ── */
-  --color-navy: #002b49;
-  --color-navy-700: #0a3d61;
-  --color-navy-600: #114e78;
-  --color-csa: #0090d0;
-  --color-csa-600: #007bb3;
-  --color-csa-50: #e6f4fb;
-  --color-gold: #e5a823;
-  --color-gold-600: #c78f12;
-  --color-gold-50: #fdf6e5;
-  --color-slate-csa: #f8fafc;
+  /* ── CSA Kenya brand — sampled from csakenya.org header ── */
+  --color-forest: #005028;
+  --color-forest-700: #0a6238;
+  --color-forest-600: #147546;
+  --color-csa: #14954f;
+  --color-csa-600: #0f7a40;
+  --color-csa-50: #e6f4ec;
+  --color-maroon: #aa475a;
+  --color-maroon-600: #8f3a4b;
+  --color-maroon-50: #f7e9ec;
+  --color-amber: #f0a032;
+  --color-amber-600: #d1881f;
+  --color-amber-50: #fdf3e2;
+  --color-slate-csa: #f6f8f6;
 }
 
 :root {
   --radius: 0.75rem;
   --background: #ffffff;
-  --foreground: #002b49;
+  --foreground: #1f2a24;
   --card: #ffffff;
-  --card-foreground: #002b49;
+  --card-foreground: #1f2a24;
   --popover: #ffffff;
-  --popover-foreground: #002b49;
-  --primary: #002b49;
+  --popover-foreground: #1f2a24;
+  --primary: #005028;
   --primary-foreground: #ffffff;
-  --secondary: #f8fafc;
-  --secondary-foreground: #002b49;
-  --muted: #f1f5f9;
-  --muted-foreground: #55677a;
-  --accent: #e6f4fb;
-  --accent-foreground: #005a82;
-  --destructive: #c0392b;
-  --border: #e2e8f0;
-  --input: #dbe3ec;
-  --ring: #0090d0;
-  --chart-1: #0090d0;
-  --chart-2: #e5a823;
-  --chart-3: #002b49;
-  --chart-4: #3fb6e3;
+  --secondary: #f6f8f6;
+  --secondary-foreground: #005028;
+  --muted: #f0f2f0;
+  --muted-foreground: #5c6b62;
+  --accent: #e6f4ec;
+  --accent-foreground: #0f7a40;
+  --destructive: #ba1a1a;
+  --border: #e3e8e4;
+  --input: #d8e0da;
+  --ring: #14954f;
+  --chart-1: #14954f;
+  --chart-2: #f0a032;
+  --chart-3: #aa475a;
+  --chart-4: #35b374;
   --chart-5: #8a5cf6;
-  --sidebar: #f8fafc;
-  --sidebar-foreground: #002b49;
-  --sidebar-primary: #002b49;
+  --sidebar: #f6f8f6;
+  --sidebar-foreground: #1f2a24;
+  --sidebar-primary: #005028;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #e6f4fb;
-  --sidebar-accent-foreground: #005a82;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #0090d0;
+  --sidebar-accent: #e6f4ec;
+  --sidebar-accent-foreground: #0f7a40;
+  --sidebar-border: #e3e8e4;
+  --sidebar-ring: #14954f;
 }
 
 @layer base {
@@ -102,8 +105,8 @@
     font-feature-settings: "ss01" on;
   }
   ::selection {
-    background: #e5a823;
-    color: #002b49;
+    background: #f0a032;
+    color: #005028;
   }
 }
 
@@ -113,12 +116,12 @@
 }
 .section-label::before {
   content: "";
-  @apply inline-block h-[2px] w-8 rounded-full bg-gold;
+  @apply inline-block h-[2px] w-8 rounded-full bg-amber;
 }
 
 /* Focus visibility (WCAG) */
 :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid #0090d0;
+  outline: 2px solid #14954f;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -129,15 +132,15 @@
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #f0f2f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c3d0dd;
+  background: #c7d2ca;
   border-radius: 8px;
-  border: 2px solid #f1f5f9;
+  border: 2px solid #f0f2f0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0090d0;
+  background: #14954f;
 }
 
 /* Map pin pulse */
