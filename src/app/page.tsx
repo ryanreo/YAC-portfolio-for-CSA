@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
-import { ShieldCheck } from 'lucide-react';
+import { FileText, ShieldCheck } from 'lucide-react';
 import { ChampionCard } from '@/components/yac/ChampionCard';
 import { ChampionModal } from '@/components/yac/ChampionModal';
 import { KenyaFootprint } from '@/components/yac/KenyaFootprint';
@@ -44,6 +45,12 @@ export default function Home() {
             <span className="caps-label hidden text-[9px] text-ink-soft md:block">
               Nairobi, Kenya — 2026
             </span>
+            <Link
+              href="/dossier"
+              className="hidden items-center gap-1.5 rounded-[2px] border border-line bg-canvas px-3 py-1.5 text-[12.5px] font-medium text-pine transition-colors duration-200 hover:bg-ivory sm:inline-flex"
+            >
+              <FileText className="h-3.5 w-3.5" /> PDF Dossier
+            </Link>
             <a
               href="#portfolios"
               className="hidden rounded-[2px] bg-slatedark px-4 py-2 text-[13px] font-medium text-canvas transition-colors duration-300 hover:bg-terra sm:inline-block"
@@ -114,8 +121,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Nº 03 — Field footprint ── */}
-        <section aria-label="Sub-national footprint" className="border-t border-line">
+        {/* ── Nº 03 — Field footprint (Excluded from print) ── */}
+        <section aria-label="Sub-national footprint" className="no-print border-t border-line">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16">
             <div className="mb-10 max-w-2xl border-b border-line pb-6">
               <p className="caps-label text-terra">Nº 03 — Field Footprint</p>
@@ -139,9 +146,18 @@ export default function Home() {
           <p className="font-serif text-base tracking-[-0.01em] text-pine">
             YAC Digital Portfolio — The Twelve
           </p>
-          <p className="caps-label text-[9px] text-ink-soft">
-            Centre for the Study of Adolescence (CSA Kenya) · csakenya.org
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/dossier"
+              className="caps-label text-[9.5px] text-terra underline-offset-4 hover:underline"
+            >
+              View Complete PDF Dossier &rarr;
+            </Link>
+            <span className="text-ink-soft/40">·</span>
+            <p className="caps-label text-[9px] text-ink-soft">
+              Centre for the Study of Adolescence (CSA Kenya) · csakenya.org
+            </p>
+          </div>
         </div>
       </footer>
 

@@ -485,9 +485,15 @@
 }
 
 /* ── Print: one-click cohort dossier ── */
+@page {
+  size: A4;
+  margin: 12mm 15mm 15mm 15mm;
+}
+
 @media print {
-  body {
-    background: #ffffff;
+  html, body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
   }
   .no-print {
     display: none !important;
@@ -495,7 +501,19 @@
   .print-block {
     display: block !important;
   }
-  section {
+  article {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 24px !important;
+    border-color: #d1d5db !important;
+    box-shadow: none !important;
+  }
+  header, footer {
     break-inside: avoid;
   }
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
 }
+
