@@ -10,10 +10,10 @@ import { CHAMPIONS, COUNTY_META, type KenyaCounty, type YACProfile } from '@/lib
  *
  * Pins are GEO-LOCKED: positions are expressed in the base image's own pixel
  * space (1408 x 710, template chrome cropped) and the portrait plate keeps the
- * image's aspect ratio, so
- * pins sit on the rendered city glows at every viewport. County HQ anchors in
- * the tight Lake Victoria basin carry a small terracotta dot at the true spot
- * with a dashed cartographic leader line to the portrait cluster.
+ * image's aspect ratio, so pins sit on the rendered city glows at every
+ * viewport. Each county HQ is marked at its true spot with a terracotta dot,
+ * a white halo and a caps name tag; the portrait cluster hugs that spot with
+ * only a short dashed leader line where the basin is too tight to fit.
  */
 const IMG_W = 1408;
 const IMG_H = 710;
@@ -21,22 +21,24 @@ const IMG_H = 710;
 type PinSpec = {
   /** True county-HQ position on the base image, in image px */
   anchor: readonly [number, number];
-  /** Portrait-cluster centre, in image px (offset with a leader line when tight) */
+  /** Portrait-cluster centre, in image px (short leader line when tight) */
   cluster: readonly [number, number];
-  label: 'above' | 'below' | 'right';
+  label: 'above' | 'below' | 'right' | 'none';
+  /** Caps name tag pinned to the true spot (only where the render names nothing) */
+  anchorTag?: string;
 };
 
 const PIN: Record<KenyaCounty, PinSpec> = {
-  // Nairobi — on the base image's Nairobi city glow
-  Nairobi: { anchor: [725, 323], cluster: [725, 323], label: 'below' },
-  // Kisumu — on the rendered Kisumu shore glow; pair offset west into the dark shore
-  Kisumu: { anchor: [359, 358], cluster: [260, 367], label: 'below' },
-  // Siaya — north-west of Kisumu, north of the shore; cluster lifted into clear dark
-  Siaya: { anchor: [330, 332], cluster: [245, 227], label: 'above' },
-  // Homa Bay — across the water, south-south-west of Kisumu; cluster offset south-west
-  'Homa Bay': { anchor: [352, 394], cluster: [278, 514], label: 'below' },
-  // Kilifi — on the coastline, north-east of the Mombasa glow
-  Kilifi: { anchor: [1005, 392], cluster: [1005, 392], label: 'right' },
+  // Nairobi — the six-portrait grid sits directly on the rendered capital glow
+  Nairobi: { anchor: [725, 323], cluster: [725, 323], label: 'right' },
+  // Kisumu — pair tucked just south-west of the rendered KISUMU shore glow
+  Kisumu: { anchor: [359, 358], cluster: [295, 420], label: 'none' },
+  // Siaya — true spot NW of Kisumu; single portrait WNW of its own dot
+  Siaya: { anchor: [330, 332], cluster: [240, 295], label: 'none', anchorTag: 'Siaya' },
+  // Homa Bay — true spot across the gulf, SSW of Kisumu; pair due south of the dot
+  'Homa Bay': { anchor: [352, 394], cluster: [360, 540], label: 'none', anchorTag: 'Homa Bay' },
+  // Kilifi — dot on the shoreline NE of Mombasa; portrait steps up the coast
+  Kilifi: { anchor: [1005, 392], cluster: [1040, 368], label: 'right' },
 };
 
 const pct = ([x, y]: readonly [number, number]) => ({
@@ -109,6 +111,23 @@ export function KenyaFootprint({ onSelect }: { onSelect: (c: YACProfile) => void
                 );
               })}
             </svg>
+
+            {/* Caps name tags at the true county-HQ spots the render leaves unlabelled */}
+            {COUNTY_META.map((c) => {
+              const p = PIN[c.name];
+              if (!p.anchorTag) return null;
+              return (
+                <div
+                  key={`tag-${c.name}`}
+                  className="pointer-events-none absolute z-[5] hidden -translate-y-1/2 sm:block"
+                  style={pct([p.anchor[0] + 13, p.anchor[1]])}
+                >
+                  <span className="rounded-[2px] bg-[#0c1613]/70 px-1.5 py-0.5 text-[8.5px] font-semibold uppercase tracking-[0.14em] text-[#a4d0ba] ring-1 ring-white/10 backdrop-blur-sm">
+                    {p.anchorTag}
+                  </span>
+                </div>
+              );
+            })}
 
             {/* Portrait clusters — the champions themselves, pinned to their counties */}
             {COUNTY_META.map((c) => {

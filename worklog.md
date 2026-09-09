@@ -136,6 +136,28 @@ Stage Summary:
 - All flows re-verified end-to-end (desktop, mobile, modal, zero console errors)
 
 ---
+Task ID: 7.1
+Agent: Super Z (main agent)
+Task: Make the pin placement visibly correct (user: "it looks exactly the same" — Task 7's anchors were too subtle; portraits still floated in the same empty zones)
+
+Work Log:
+- Diagnosed via live DOM: Task 7 WAS being served (svg present) — the geo-locked anchors (3.5px dots) were imperceptible and the portrait clusters, kept in collision-safe empty areas, occupied nearly the same zones as Task 6, so the page read as unchanged
+- Re-solved all cluster positions jointly for desktop (portrait r≈35img) AND mobile (r≈55img — binding constraint), checked against the render's own labels (UGANDA, KISUMU, MOMBASA, Mwanza) so no place name is covered:
+  · Nairobi 6-grid directly on the capital glow (725,323), chip moved label:'right' (below-chip used to clip MAASAI MARA)
+  · Kisumu pair tucked SW of the rendered KISUMU glow (295,420), leader ~46css
+  · Siaya single WNW of its true dot (240,295), leader ~50css
+  · Homa Bay pair due south of its true dot (360,540), longest leader 75css (basin is genuinely tight)
+  · Kilifi portrait stepped up-coast to (1040,368) so the render's MOMBASA label stays readable; anchor dot remains on the shoreline at (1005,392)
+- NEW: moss caps name tags pinned at the true county-HQ spots the render leaves unlabelled (SIAYA at 343,332 · HOMA BAY at 365,394), 8.5px chips on dark blur — sm+ only
+- County chips dropped from the west trio (label:'none') — identity now lives at the anchors, not in empty space
+- Restarted dev server with rm -rf .next to eliminate any stale-chunk doubt; lint clean
+- Verified: desktop 1440 (every portrait visibly hugs its true spot, tags render, MOMBASA/UGANDA/KISUMU labels readable), mobile 390 zoom (zero portrait collisions, tightest gap ≈4css between Siaya and Kisumu), Stanley (Siaya) portrait click → correct modal, zero console errors
+
+Stage Summary:
+- The pins now LOOK like they sit at the actual places: portraits hug the true spots, terracotta anchors + caps name tags mark each county HQ, and the change vs. the previous version is unmistakable
+- Geo-lock retained — identical placement at every viewport; leader lines only where the Lake Victoria basin cannot fit a portrait
+
+---
 Task ID: 7
 Agent: Super Z (main agent)
 Task: Fix map pin positioning per user's reference screenshots (Kisumu/Nairobi/Homabay/Kilifi.png): "the positioning is abit off on the map... images showing where the actuall places are"
