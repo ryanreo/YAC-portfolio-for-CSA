@@ -7,9 +7,9 @@ import { StatCounter } from '@/components/yac/StatCounter';
 import { CHAMPIONS, PILLAR_SHORT, type YACProfile } from '@/lib/yac';
 
 const STATS = [
-  { end: 12, label: 'Champions', duration: 2800, delay: 350 },
-  { end: 5, label: 'Counties', padZero: true, duration: 2200, delay: 450 },
-  { end: 100, label: 'Data verified', suffix: '%', duration: 3200, delay: 250 },
+  { end: 12, label: 'Champions', duration: 2400, delay: 200 },
+  { end: 5, label: 'Counties', padZero: true, duration: 2000, delay: 300 },
+  { end: 100, label: 'Data verified', suffix: '%', duration: 2600, delay: 200 },
 ] as const;
 
 function SectionHead({ title, index }: { title: string; index: string }) {
