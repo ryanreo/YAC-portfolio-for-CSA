@@ -55,7 +55,7 @@ export default function Home() {
               href="#portfolios"
               className="hidden rounded-[2px] bg-slatedark px-4 py-2 text-[13px] font-medium text-canvas transition-colors duration-300 hover:bg-terra sm:inline-block"
             >
-              The Twelve Portfolios
+              The Portfolios
             </a>
           </div>
         </div>
@@ -67,20 +67,20 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <div className="fade-up lg:col-span-8">
               <p className="caps-label text-terra">Nº 01 — The Cohort · Youth Advocacy Champions</p>
-              <h1 className="mt-6 max-w-3xl font-serif text-[2.5rem] leading-[1.06] tracking-[-0.03em] text-pine sm:text-6xl lg:text-[4.25rem]">
-                Twelve young Kenyans turning lived experience into{' '}
+              <h1 className="mt-6 max-w-4xl font-serif text-[2.5rem] leading-[1.06] tracking-[-0.03em] text-pine sm:text-6xl lg:text-[4.25rem]">
+                SRHR Youth Advocacy Champions — turning lived experience into{' '}
                 <em className="italic text-terra">policy evidence</em>.
               </h1>
             </div>
             <div className="fade-up flex flex-col justify-end lg:col-span-4">
               <p className="max-w-md text-[15px] leading-[1.65] text-ink-soft">
                 Legal reform, GIS &amp; spatial data, health communication, grassroots
-                mobilisation — the working portfolios of the 12 Youth Advocacy Champions,
+                mobilisation — the working portfolios of the Youth Advocacy Champions,
                 verified county by county. Open any profile to read it in full.
               </p>
               <p className="caps-label mt-5 flex items-center gap-2 text-[9px] text-ink-soft">
                 <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-forest" aria-hidden="true" />
-                All 12 ages &amp; counties verified — zero-inference policy
+                All champion ages &amp; counties verified — zero-inference policy
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
       {/* ── Nº 02 — The portfolios ── */}
       <main className="flex-1">
         <section
-          aria-label="The 12 champion portfolios"
+          aria-label="Champion portfolios"
           className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16"
         >
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-6">
@@ -110,10 +110,10 @@ export default function Home() {
                 Selected champions &amp; <em className="italic text-forest">field profiles</em>
               </h2>
             </div>
-            <p className="caps-label text-[9px] text-ink-soft">12 profiles — 2024–2026</p>
+            <p className="caps-label text-[9px] text-ink-soft">Cohort Profiles — 2024–2026</p>
           </div>
 
-          {/* Hairline archive grid — one specimen sheet, twelve plates */}
+          {/* Hairline archive grid — specimen plates */}
           <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
             {CHAMPIONS.map((c, i) => (
               <ChampionCard key={c.id} champion={c} index={i} onSelect={setSelected} />
@@ -121,13 +121,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Nº 03 — Field footprint (Excluded from print) ── */}
-        <section aria-label="Sub-national footprint" className="no-print border-t border-line">
+        {/* ── Nº 03 — Impact Areas (Excluded from print) ── */}
+        <section aria-label="Impact areas" className="no-print border-t border-line">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16">
             <div className="mb-10 max-w-2xl border-b border-line pb-6">
-              <p className="caps-label text-terra">Nº 03 — Field Footprint</p>
+              <p className="caps-label text-terra">Nº 03 — Impact Areas</p>
               <h2 className="mt-3 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
-                Where the twelve <em className="italic text-forest">work</em>
+                Impact Areas
               </h2>
               <p className="mt-4 max-w-xl text-[15px] leading-[1.65] text-ink-soft">
                 Live cohort distribution across five operational counties — from the Lake
@@ -154,7 +154,7 @@ export default function Home() {
               />
             </span>
             <p className="font-serif text-base tracking-[-0.01em] text-pine">
-              YAC Digital Portfolio — The Twelve
+              SRHR Youth Advocacy Champions — Digital Portfolio
             </p>
           </div>
           <div className="flex items-center gap-4">

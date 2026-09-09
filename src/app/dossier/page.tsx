@@ -208,12 +208,12 @@ export default function DossierPage() {
                 Centre for the Study of Adolescence (CSA Kenya) · INSPIRE Lab
               </span>
               <h1 className="mt-1 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
-                YAC Digital Portfolio — Executive Dossier
+                SRHR Youth Advocacy Champions — Executive Dossier
               </h1>
             </div>
           </div>
           <div className="text-left sm:text-right">
-            <p className="font-serif text-sm italic text-forest">The 12 Youth Advocacy Champions</p>
+            <p className="font-serif text-sm italic text-forest">SRHR Youth Advocacy Champions</p>
             <p className="caps-label mt-1 text-[9px] text-ink-soft">Nairobi, Kenya — 2024–2026</p>
           </div>
         </div>
@@ -225,17 +225,17 @@ export default function DossierPage() {
           <div className="max-w-3xl">
             <p className="caps-label text-terra">Nº 01 — Executive Overview</p>
             <h2 className="mt-3 font-serif text-3xl leading-snug tracking-[-0.02em] text-pine sm:text-4xl">
-              Twelve young Kenyans turning lived experience into{' '}
+              SRHR Youth Advocacy Champions — turning lived experience into{' '}
               <em className="italic text-terra">policy evidence</em>.
             </h2>
             <p className="mt-4 text-[15px] leading-[1.65] text-ink-soft">
               Legal reform, GIS &amp; spatial data, health communication, grassroots mobilisation —
-              the complete working profiles of the 12 Youth Advocacy Champions across five
+              the complete working profiles of the Youth Advocacy Champions across five
               operational counties. All biographies, education, and credentials presented in full.
             </p>
             <p className="caps-label mt-4 flex items-center gap-2 text-[9.5px] text-ink-soft">
               <ShieldCheck className="h-3.5 w-3.5 text-forest" />
-              All 12 ages &amp; counties verified — zero-inference data contract
+              All champion ages &amp; counties verified — zero-inference data contract
             </p>
           </div>
 
@@ -255,7 +255,7 @@ export default function DossierPage() {
         <div className="mb-8 border-b border-line pb-4">
           <p className="caps-label text-terra">Nº 02 — Complete Champion Portfolios</p>
           <h2 className="mt-2 font-serif text-2xl tracking-[-0.01em] text-pine sm:text-3xl">
-            The Twelve Profiles (Full Biographies)
+            Champion Profiles (Full Biographies)
           </h2>
         </div>
 
@@ -280,7 +280,7 @@ export default function DossierPage() {
               />
             </span>
             <p className="font-serif text-sm text-pine">
-              YAC Digital Portfolio — Complete Executive Dossier
+              SRHR Youth Advocacy Champions — Complete Executive Dossier
             </p>
           </div>
           <p className="caps-label text-[9.5px] text-ink-soft">

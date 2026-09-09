@@ -1,7 +1,7 @@
-# 🇰🇪 YAC Digital Portfolio — The Twelve Champions
+# 🇰🇪 SRHR Youth Advocacy Champions — Digital Portfolio
 
 > **Centre for the Study of Adolescence (CSA Kenya) · INSPIRE Lab**  
-> *Twelve young Kenyans turning lived experience into policy evidence.*
+> *SRHR Youth Advocacy Champions — turning lived experience into policy evidence.*
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://app.netlify.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
@@ -13,14 +13,14 @@
 
 ## 📖 Overview
 
-The **YAC Digital Portfolio** is an interactive, editorial digital dossier showcasing the working portfolios of the twelve **Youth Advocacy Champions (YACs)** supported by the **Centre for the Study of Adolescence (CSA Kenya)**.
+The **SRHR Youth Advocacy Champions Digital Portfolio** is an interactive, editorial digital dossier showcasing the working portfolios of the **Youth Advocacy Champions (YACs)** supported by the **Centre for the Study of Adolescence (CSA Kenya)**.
 
-From legal reform and GIS spatial epidemiology to health communication, adolescent SRHR, and community mobilization, these twelve verified young leaders operate at the intersection of lived community reality and legislative change.
+From legal reform and GIS spatial epidemiology to health communication, adolescent SRHR, and community mobilization, these verified young leaders operate at the intersection of lived community reality and legislative change.
 
 ### 🌟 Core Highlights
-- **12 Verified Champions**: 100% verified ages, counties, academic backgrounds, and field competencies under a strict zero-inference data contract.
+- **Verified Champions**: 100% verified ages, counties, academic backgrounds, and field competencies under a strict zero-inference data contract.
 - **5 Operational Counties**: Active footprint spanning **Nairobi**, **Kisumu**, **Kilifi**, **Siaya**, and **Homa Bay**.
-- **Interactive Kenya Footprint Map**: Calibrated perspective satellite plate mapping operational hubs with inland avatar fanout, hover grace debouncing, and cluster resolution.
+- **Interactive Impact Areas Map**: Calibrated perspective satellite plate mapping operational hubs with inland avatar fanout, hover grace debouncing, and cluster resolution.
 - **Specimen Portfolio Cards & Modals**: Clean, editorial dossier layout displaying full professional biographies, technical skills, core pillars, and organizational affiliations.
 - **Print & Executive Dossier Support**: Native `@media print` styling that formats the entire portfolio into a publication-grade briefing document.
 
