@@ -193,13 +193,13 @@ export default function DossierPage() {
       <header className="border-b border-line bg-canvas px-4 py-8 sm:px-6 lg:px-16">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div className="flex items-center gap-4">
-            <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white shadow-sm">
+            <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-pine p-1 shadow-sm">
               <Image
-                src="/csa-logo.png"
+                src="/csa-dossier-logo.png"
                 alt="Centre for the Study of Adolescence logo"
                 width={64}
                 height={64}
-                className="scale-[1.3] object-contain"
+                className="object-contain"
                 priority
               />
             </span>
@@ -270,13 +270,13 @@ export default function DossierPage() {
       <footer className="border-t border-line bg-canvas px-4 py-8 sm:px-6 lg:px-16">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
-            <span className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white">
+            <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-pine p-1">
               <Image
-                src="/csa-logo.png"
+                src="/csa-dossier-logo.png"
                 alt="CSA Logo"
-                width={32}
-                height={32}
-                className="scale-[1.2] object-contain"
+                width={36}
+                height={36}
+                className="object-contain"
               />
             </span>
             <p className="font-serif text-sm text-pine">
