@@ -115,3 +115,22 @@ Work Log:
 Stage Summary:
 - Site now renders the max-resolution original of the exact template map
 - User has the high-res file in download/ for external enhancement; re-drop over public/kenya/field-nodes.jpg at ~1.833 aspect to swap back in
+
+---
+Task ID: 6
+Agent: Super Z (main agent)
+Task: Stanley's actual bio + map quality fix + replace county dots with YAC portraits (user: "Here is Stanleys Actual Bio i noticed his was blank... why does the Quality look toned down in the Website also instead of Dots why not have the images of the YACs on the map")
+
+Work Log:
+- src/lib/yac.ts: added Stanley Hayo Yongo's actual fullBio (verbatim user-provided text, converted to third person to match portfolio voice); refreshed his shortBio to mirror the real first sentence; affiliations now include Family Health Options Kenya; skillsAndTools updated to bio-verified list (Community Scorecards, Intergenerational Dialogues, Human Subject Protection, Data Analytics, Social Media Management, Communications)
+- KenyaFootprint.tsx: removed the opacity-90/hover-opacity treatment — root cause of the "toned down" look (image was blending 10% with the dark #0c1613 canvas); map now renders at opacity 1, full brightness
+- KenyaFootprint.tsx: county dot pins replaced with the 12 YACs' actual headshots as circular portrait pins (border-2 dark + white/30 ring, Atelier coin style); clusters per county (Nairobi 3x2 grid, Kisumu/Homa Bay pairs with -space-x overlap, Siaya/Kilifi singles); each portrait is a button that opens that champion's portfolio modal via new onSelect prop
+- Collision-tuned PIN_POS for larger clusters (Siaya NW 38/15, Kisumu 50/23 label right, Homa Bay S 62/23, Kilifi coast 56/74, Nairobi hub 52/53); county chips kept sm+ with per-county placement (above/below/right), hidden on mobile where the ledger panel carries the names/counts
+- page.tsx: wired <KenyaFootprint onSelect={setSelected} /> so map portraits open the shared modal
+- Ledger panel: added italic serif hint "Select any portrait on the map to open that champion's full portfolio."
+- Verified: bun lint clean; agent-browser — 12 pins rendered, computed map opacity = 1, desktop 1440 screenshot (clusters collision-free, geography correct), Tonny/Stanley pin click → correct modal, Stanley modal shows FULL BIO OK + FHOK OK, mobile 390 map clean, zero console errors
+
+Stage Summary:
+- Stanley's dossier now carries his real, complete biography (zero-inference respected — verbatim source text)
+- Map renders at full photographic quality; portraits of the YACs themselves are now the map pins, each clickable into its portfolio
+- All flows re-verified end-to-end (desktop, mobile, modal, zero console errors)

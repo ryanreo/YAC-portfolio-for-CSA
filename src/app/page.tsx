@@ -123,7 +123,7 @@ export default function Home() {
                 corridor.
               </p>
             </div>
-            <KenyaFootprint />
+            <KenyaFootprint onSelect={setSelected} />
           </div>
         </section>
       </main>

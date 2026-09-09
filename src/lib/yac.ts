@@ -147,10 +147,25 @@ export const CHAMPIONS: YACProfile[] = [
     academicBackground: 'Community Development',
     primaryRole: 'Meaningful Youth Engagement Practitioner & TWG Member',
     thematicPillars: ['SRHR & Public Health', 'Data, GIS & Tech', 'Legal & Policy Advocacy'],
-    skillsAndTools: ['Community Scorecards', 'Data Analytics', 'Human Subject Protection', 'Intergenerational Dialogues'],
-    affiliations: ['County Government of Siaya AYSRHR TWG', 'Mildmay International Kenya', 'Marie Stopes Kenya', 'SHE SOARS Project'],
+    skillsAndTools: [
+      'Community Scorecards',
+      'Intergenerational Dialogues',
+      'Human Subject Protection',
+      'Data Analytics',
+      'Social Media Management',
+      'Communications',
+    ],
+    affiliations: [
+      'Mildmay International Kenya',
+      'Marie Stopes Kenya',
+      'Family Health Options Kenya',
+      'Centre for the Study of Adolescence (SHE SOARS Project)',
+      'County Government of Siaya AYSRHR TWG',
+    ],
     shortBio:
-      'Community Development practitioner with over 7 years of experience implementing SRHR, gender, economic empowerment, and youth-led advocacy programmes.',
+      'Community Development and Meaningful Youth Engagement practitioner with over seven years of experience implementing SRHR, gender, economic empowerment, and advocacy programmes.',
+    fullBio:
+      'Stanley Hayo Yongo is a Community Development and Meaningful Youth Engagement practitioner with over seven years of experience implementing Sexual and Reproductive Health and Rights (SRHR), Gender, Economic Empowerment, and Advocacy programmes. He has worked with Mildmay International Kenya, Marie Stopes Kenya, Family Health Options Kenya, the Centre for the Study of Adolescence (SHE SOARS Project), and the County Government of Siaya, where he serves as a member of the Technical Working Group for AYSRHR. He has supported community engagements, community scorecards, gender norms work, intergenerational dialogues and youth-led advocacy initiatives, and is trained in Human Subject Protection and Data Analytics, with additional skills in Professional Foundations, Communications, Social Media Management and Advocacy.',
     verified: true,
   },
   {
