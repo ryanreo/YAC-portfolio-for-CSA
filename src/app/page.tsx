@@ -7,12 +7,13 @@ import { FileText, ShieldCheck } from 'lucide-react';
 import { ChampionCard } from '@/components/yac/ChampionCard';
 import { ChampionModal } from '@/components/yac/ChampionModal';
 import { KenyaFootprint } from '@/components/yac/KenyaFootprint';
+import { StatCounter } from '@/components/yac/StatCounter';
 import { CHAMPIONS, type YACProfile } from '@/lib/yac';
 
 const STATS = [
-  { value: '12', label: 'Champions' },
-  { value: '05', label: 'Counties' },
-  { value: '100%', label: 'Data verified' },
+  { end: 12, label: 'Champions', duration: 2800, delay: 350 },
+  { end: 5, label: 'Counties', padZero: true, duration: 2200, delay: 450 },
+  { end: 100, label: 'Data verified', suffix: '%', duration: 3200, delay: 250 },
 ] as const;
 
 export default function Home() {
@@ -89,7 +90,15 @@ export default function Home() {
           <div className="mt-14 grid grid-cols-3 gap-6 border-t border-line pt-6 sm:mt-16">
             {STATS.map((s) => (
               <div key={s.label}>
-                <p className="font-serif text-4xl tracking-[-0.02em] text-pine sm:text-5xl">{s.value}</p>
+                <p className="font-serif text-4xl tracking-[-0.02em] text-pine sm:text-5xl">
+                  <StatCounter
+                    end={s.end}
+                    duration={s.duration}
+                    delay={s.delay}
+                    padZero={'padZero' in s && Boolean(s.padZero)}
+                    suffix={'suffix' in s ? s.suffix : ''}
+                  />
+                </p>
                 <p className="caps-label mt-2 text-[9px] text-ink-soft">{s.label}</p>
               </div>
             ))}
