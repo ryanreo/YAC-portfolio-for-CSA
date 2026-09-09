@@ -1,0 +1,496 @@
+     1→<!DOCTYPE html>
+     2→
+     3→<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+     4→<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#e5e2dd", "inverse-surface": "#31302d", "primary-fixed": "#c0edd5", "on-secondary-fixed-variant": "#862304", "on-tertiary": "#ffffff", "secondary-container": "#fd7954", "tertiary-container": "#2c3933", "on-primary-fixed": "#002115", "on-primary-container": "#7da893", "primary-container": "#133d2d", "outline": "#717974", "error": "#ba1a1a", "on-secondary": "#ffffff", "outline-variant": "#c1c8c2", "secondary-fixed": "#ffdbd1", "primary-fixed-dim": "#a4d0ba", "sage-soft": "#E2E8E3", "on-primary-fixed-variant": "#264e3d", "background": "#fcf9f4", "tertiary-fixed": "#d7e6dd", "surface-variant": "#e5e2dd", "on-tertiary-container": "#94a29b", "surface-container-lowest": "#ffffff", "on-secondary-container": "#6c1800", "inverse-on-surface": "#f3f0eb", "surface": "#fcf9f4", "forest-deep": "#133D2D", "terracotta-warm": "#D35A38", "tertiary": "#17241e", "secondary-fixed-dim": "#ffb5a0", "tertiary-fixed-dim": "#bbcac1", "on-surface": "#1c1c19", "surface-container-low": "#f6f3ee", "surface-dim": "#dcdad5", "on-error-container": "#93000a", "on-background": "#1c1c19", "on-error": "#ffffff", "surface-container-high": "#ebe8e3", "primary": "#002619", "slate-dark": "#161B18", "on-tertiary-fixed-variant": "#3c4a43", "charcoal-muted": "#272E2B", "card-ivory": "#F3EFEA", "error-container": "#ffdad6", "surface-tint": "#3e6654", "secondary": "#a63a1b", "on-tertiary-fixed": "#121e19", "on-primary": "#ffffff", "surface-bright": "#fcf9f4", "on-surface-variant": "#414944", "border-subtle": "#E5DFD7", "surface-container": "#f0ede9", "canvas-cream": "#FAF7F2", "on-secondary-fixed": "#3b0900", "inverse-primary": "#a4d0ba" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-desktop": "2rem", "gutter-mobile": "1rem", "space-sm": "0.75rem", "space-md": "1rem", "space-3xl": "6rem", "space-xl": "2.5rem", "space-xs": "0.5rem", "margin-mobile": "1.25rem", "space-2xl": "4rem", "space-4xl": "9rem", "space-lg": "1.5rem", "margin-desktop": "4rem", "space-2xs": "0.25rem" }, "fontFamily": { "headline-lg": ["Newsreader"], "body-sm": ["Manrope"], "headline-xl-mobile": ["Newsreader"], "body-md": ["Manrope"], "headline-xl": ["Newsreader"], "display-hero": ["Newsreader"], "label-caps": ["Manrope"], "headline-sm": ["Newsreader"], "display-hero-mobile": ["Newsreader"], "label-md": ["Manrope"], "body-lg": ["Manrope"], "headline-md": ["Newsreader"] }, "fontSize": { "headline-lg": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.875rem", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["2.125rem", { "lineHeight": "1.2", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl": ["3rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-hero": ["4.5rem", { "lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": "400" }], "label-caps": ["0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-sm": ["1.375rem", { "lineHeight": "1.35", "letterSpacing": "0", "fontWeight": "500" }], "display-hero-mobile": ["2.75rem", { "lineHeight": "1.12", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-md": ["0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }], "body-lg": ["1.125rem", { "lineHeight": "1.65", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["1.75rem", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-background/85 backdrop-blur-md border-b border-border-subtle"><div class="h-20 max-w-7xl mx-auto px-margin-mobile md:px-space-xl lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="work" href="#"><img alt="Atelier Studio Editorial Monogram" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1XSybSH06c8cW9cOqTCtBDQOeQNzSJuC_RrAMHwUR3rctyV-8OIutMbbaNH5nIBZwb7uTADhbHDw7bDCDHwoCSpd5YG3vyuJ_VG9r6P-DD25UNNw12pCZdcwVRe4nReRPWHitglFj15z3gx0XojcXatDa0ITw3DtVe2mmw30wLat5xaXUgOKRtCpf8uOPSVQtstpSO-vYsZfTJXh-ZXTSjvnnULAGJSB0gxd4GGElopwWRfTTEEsjM7x7I"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary">Atelier</span></a></div><nav class="hidden lg:flex items-center gap-space-xl" data-active-classes="text-primary font-medium underline underline-offset-8 decoration-1 decoration-border-subtle"><a aria-current="page" class="uppercase tracking-wider transition-colors duration-200 text-primary font-medium underline underline-offset-8 decoration-1 decoration-border-subtle" data-path="work" href="#">Work</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="about" href="#">About</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="team-and-impact" href="#">Team &amp; Impact</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="articles" href="#">Articles</a><a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-slate-dark text-canvas-cream font-label-md text-label-md px-space-lg py-space-xs rounded transition-colors duration-300 hover:bg-terracotta-warm" data-path="contact" href="#">Let’s Collaborate</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+     5→<!-- Hero Section (Typography-Led Statement & Editorial Tension) -->
+     6→<section class="relative w-full max-w-7xl mx-auto px-margin-mobile md:px-space-xl lg:px-margin-desktop pt-space-xl pb-space-3xl flex flex-col justify-between">
+     7→<div class="grid grid-cols-1 lg:grid-cols-12 gap-y-space-xl lg:gap-gutter-desktop items-start">
+     8→<!-- Left Editorial Intro (8 cols) -->
+     9→<div class="lg:col-span-8 flex flex-col space-y-space-lg">
+    10→<div class="inline-flex items-center gap-space-xs">
+    11→<span class="w-1.5 h-1.5 rounded-full bg-terracotta-warm"></span>
+    12→<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">
+    13→            Independent Design Director &amp; Strategic Architect — Nairobi &amp; Global
+    14→          </span>
+    15→</div>
+    16→<h1 class="font-display-hero text-display-hero text-primary tracking-tight font-normal leading-[1.04]">
+    17→          Crafting resilient brand systems, digital artifacts &amp; <span class="italic font-newsreader text-terracotta-warm">climate-conscious</span> interfaces with editorial rigor.
+    18→        </h1>
+    19→<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl pt-space-xs">
+    20→          Partnering with global institutions, impact initiatives across East Africa, and progressive design studios to deliver deliberate, high-craft digital experiences rooted in ecological clarity and tactile permanence.
+    21→        </p>
+    22→<!-- Micro Action Row -->
+    23→<div class="pt-space-md flex flex-wrap items-center gap-space-lg">
+    24→<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary hover:text-terracotta-warm transition-colors duration-200 group" href="#selected-archive">
+    25→<span class="underline underline-offset-8 decoration-border-subtle group-hover:decoration-terracotta-warm">Explore Selected Archive</span>
+    26→<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-y-1">arrow_downward</span>
+    27→</a>
+    28→<span class="text-outline-variant font-label-caps">•</span>
+    29→<a class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-200" href="#impact-nodes">
+    30→            Field Hubs &amp; Nodes
+    31→          </a>
+    32→</div>
+    33→</div>
+    34→<!-- Right Metadata & Metrics Bar (4 cols) -->
+    35→<div class="lg:col-span-4 flex flex-col justify-between h-full space-y-space-xl lg:pl-space-md">
+    36→<!-- Live Status Pill -->
+    37→<div class="p-space-lg bg-card-ivory rounded-lg shadow-sm flex flex-col space-y-space-xs">
+    38→<div class="flex items-center justify-between">
+    39→<span class="font-label-caps text-label-caps uppercase tracking-widest text-forest-deep">Current Dispatch</span>
+    40→<span class="font-label-caps text-label-caps text-on-surface-variant">2025 // Q2</span>
+    41→</div>
+    42→<p class="font-headline-sm text-headline-sm text-primary">Nairobi Studio &amp; Wildlife Geospatial Labs</p>
+    43→<p class="font-body-sm text-body-sm text-on-surface-variant">Deploying sensor arrays and cartographic models across the Great Rift corridor.</p>
+    44→</div>
+    45→<!-- 3 Quantitative Metric Strips -->
+    46→<div class="grid grid-cols-3 gap-space-sm pt-space-md">
+    47→<div class="flex flex-col">
+    48→<span class="font-headline-lg text-headline-lg text-primary tracking-tight">12<span class="text-terracotta-warm text-headline-sm">+</span></span>
+    49→<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider mt-space-2xs">Years Practice</span>
+    50→</div>
+    51→<div class="flex flex-col">
+    52→<span class="font-headline-lg text-headline-lg text-primary tracking-tight">40<span class="text-terracotta-warm text-headline-sm">+</span></span>
+    53→<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider mt-space-2xs">Shipped Systems</span>
+    54→</div>
+    55→<div class="flex flex-col">
+    56→<span class="font-headline-lg text-headline-lg text-primary tracking-tight">08</span>
+    57→<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider mt-space-2xs">Design Distinctions</span>
+    58→</div>
+    59→</div>
+    60→</div>
+    61→</div>
+    62→</section>
+    63→<!-- Masonry-Style Project Gallery -->
+    64→<section class="w-full bg-card-ivory/50 py-space-3xl" id="selected-archive">
+    65→<div class="max-w-7xl mx-auto px-margin-mobile md:px-space-xl lg:px-margin-desktop space-y-space-2xl">
+    66→<!-- Section Header & Filter Controls -->
+    67→<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+    68→<div class="space-y-space-2xs max-w-xl">
+    69→<div class="flex items-center gap-space-xs">
+    70→<span class="w-2 h-0.5 bg-forest-deep"></span>
+    71→<span class="font-label-caps text-label-caps uppercase tracking-widest text-forest-deep">Curated Portfolio</span>
+    72→</div>
+    73→<h2 class="font-headline-xl text-headline-xl text-primary">Selected Works &amp; Case Studies</h2>
+    74→</div>
+    75→<!-- Filter Pill Chips -->
+    76→<div class="flex flex-wrap items-center gap-space-xs" id="filter-container">
+    77→<button class="filter-btn px-space-md py-space-2xs rounded-full font-label-caps text-label-caps uppercase tracking-wider bg-slate-dark text-canvas-cream transition-all duration-200" data-filter="all">
+    78→            All Works (06)
+    79→          </button>
+    80→<button class="filter-btn px-space-md py-space-2xs rounded-full font-label-caps text-label-caps uppercase tracking-wider bg-surface hover:bg-sage-soft text-on-surface transition-all duration-200 shadow-sm" data-filter="spatial">
+    81→            Spatial Data
+    82→          </button>
+    83→<button class="filter-btn px-space-md py-space-2xs rounded-full font-label-caps text-label-caps uppercase tracking-wider bg-surface hover:bg-sage-soft text-on-surface transition-all duration-200 shadow-sm" data-filter="impact">
+    84→            Conservation
+    85→          </button>
+    86→<button class="filter-btn px-space-md py-space-2xs rounded-full font-label-caps text-label-caps uppercase tracking-wider bg-surface hover:bg-sage-soft text-on-surface transition-all duration-200 shadow-sm" data-filter="identity">
+    87→            Brand Identity
+    88→          </button>
+    89→<button class="filter-btn px-space-md py-space-2xs rounded-full font-label-caps text-label-caps uppercase tracking-wider bg-surface hover:bg-sage-soft text-on-surface transition-all duration-200 shadow-sm" data-filter="editorial">
+    90→            Editorial
+    91→          </button>
+    92→</div>
+    93→</div>
+    94→<!-- Asymmetrical Masonry Grid -->
+    95→<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg lg:gap-gutter-desktop items-start" id="gallery-grid">
+    96→<!-- Project 1: Savanna Horizon GIS (Large Hero Feature - 8 cols) -->
+    97→<article class="gallery-item md:col-span-8 group bg-card-ivory rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="spatial impact">
+    98→<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-high">
+    99→<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Editorial screenshot of an interactive dark mode GIS map interface illustrating East Africa Kenya and Uganda wildlife corridor heatmaps, subtle neon tracking nodes, minimal cartographic vector grids, fine typography annotations, and satellite land layers in deep navy and forest emerald green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSYS7rcAuZ1cZ1odu_kIDMZzwfBSKo54-AOtItYUW4GX6fcQYuS2QUTx23lpOpI8V50VxPKuvcyhWWFtWwQXTU2PwLnCk8ExuX8RZNCKcdfMJgvHtTBNpg4KIr2ggoNd_GHKKNSgYXidpmz6Ym5AuP9TE6ZIPT9h0oZrhDIo8mJXi-igWIrW7uW387p42d6vpL5y5y-uLEhlWnkT0Y5FHxqZ4b2jxuo7doLR1K2zMgRQE4mZKJL_Ba"/>
+   100→<div class="absolute top-space-md left-space-md flex gap-space-2xs">
+   101→<span class="px-space-xs py-0.5 rounded-full bg-forest-deep/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Spatial Data</span>
+   102→<span class="px-space-xs py-0.5 rounded-full bg-slate-dark/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Digital Product</span>
+   103→</div>
+   104→<div class="absolute bottom-space-md right-space-md px-space-sm py-space-2xs rounded bg-surface/90 backdrop-blur-sm font-label-caps text-label-caps text-on-surface">
+   105→              2024 — Active Release
+   106→            </div>
+   107→</div>
+   108→<div class="p-space-xl flex flex-col justify-between flex-grow space-y-space-md">
+   109→<div class="space-y-space-xs">
+   110→<div class="flex items-center justify-between">
+   111→<span class="font-label-caps text-label-caps uppercase tracking-wider text-terracotta-warm">Kenya Wildlife Service × Nature Conservancy</span>
+   112→<span class="material-symbols-outlined text-on-surface-variant group-hover:text-terracotta-warm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">arrow_outward</span>
+   113→</div>
+   114→<h3 class="font-headline-md text-headline-md text-primary group-hover:text-forest-deep transition-colors">Savanna Horizon GIS — Real-Time Wildlife Corridor Cartography</h3>
+   115→<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+   116→                A high-resolution spatial decision engine designed for rangers, conservation scientists, and pastoralist councils to monitor elephant migratory pathways across the Maasai Mara ecosystem in high-fidelity vector terrain.
+   117→              </p>
+   118→</div>
+   119→<div class="flex items-center gap-space-md pt-space-xs">
+   120→<span class="font-label-md text-label-md text-primary underline underline-offset-4 decoration-border-subtle group-hover:decoration-terracotta-warm group-hover:text-terracotta-warm transition-all">
+   121→                Examine GIS System Details →
+   122→              </span>
+   123→</div>
+   124→</div>
+   125→</article>
+   126→<!-- Project 2: Mara Eco-Sanctuary (Tall Portrait - 4 cols) -->
+   127→<article class="gallery-item md:col-span-4 group bg-card-ivory rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="identity impact">
+   128→<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container-high">
+   129→<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Monochrome textured editorial brand identity stationery mockup on warm ivory cotton rag paper, debossed geometric circular logo emblem inspired by traditional pastoralist beadwork, botanical field guide and linen hardbound catalog in olive and terracotta tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOhnVh1Z-Oyb3clkLu58GW8bwT_sefdRy2qucHj9O5rJ13MsZLphELI6WJFXCJGT_dkb1REqN2RWZ7cvz8wpKOGhi4APVgfBye0Lvx8XkKHGtoUDq1uNtw97ym1j5CxfSXS1_EL7BWfCSDpZDx56I33lXlQl3L9pOk5jX2FRZadGbSoRLPCayug7VcOIQOxZVxWrwK3tz4ij0jGQAI8YdmsusihwQVrYcY3YVAGw7H3rX7pXthnTHL"/>
+   130→<div class="absolute top-space-md left-space-md">
+   131→<span class="px-space-xs py-0.5 rounded-full bg-forest-deep/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Brand Identity</span>
+   132→</div>
+   133→</div>
+   134→<div class="p-space-lg flex flex-col justify-between flex-grow space-y-space-md">
+   135→<div class="space-y-space-2xs">
+   136→<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Narok Land Trust // 2023</span>
+   137→<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-forest-deep transition-colors">Mara Eco-Sanctuary Identity &amp; Signage Architecture</h3>
+   138→<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+   139→                Complete brand architecture, weathered steel wayfinding systems, and bilingual botanical identification manuals for a community-led wildlife conservancy.
+   140→              </p>
+   141→</div>
+   142→<span class="font-label-md text-label-md text-primary underline underline-offset-4 decoration-border-subtle group-hover:decoration-terracotta-warm group-hover:text-terracotta-warm transition-all">
+   143→              View Case Study →
+   144→            </span>
+   145→</div>
+   146→</article>
+   147→<!-- Project 3: Kidepo Wilderness Archive (Square - 4 cols) -->
+   148→<article class="gallery-item md:col-span-4 group bg-card-ivory rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="editorial">
+   149→<div class="relative w-full aspect-square overflow-hidden bg-surface-container-high">
+   150→<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Editorial book opening photograph showcasing expansive landscape typography, high-contrast black and white photography of rugged semi-arid savannah mountains in Uganda, minimal index headers, and archival museum typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_s8rkukjYeT4nPZrlYH2SSc0Fd_Ir_Coo3bz7qBIFdx9xmn7d3laduUu1WttLjgQxtY_SUzZYePLspOo3SXHDzqnUGvujrcrUgUCrX79z11xyudB8j5mrCPRwbMsjkAWqx3VrvjBxTryjze8DFEvZ7gsg1XpmKlWvTpUve0at2RQYTseiLtUgKBWTkt-OvmecGqzUw_F-vGvXUnuBS8Dgar6ZDyAuUt6_PlYYWaMBiQnbM5rzZRGz"/>
+   151→<div class="absolute top-space-md left-space-md">
+   152→<span class="px-space-xs py-0.5 rounded-full bg-slate-dark/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Editorial Archive</span>
+   153→</div>
+   154→</div>
+   155→<div class="p-space-lg flex flex-col justify-between flex-grow space-y-space-md">
+   156→<div class="space-y-space-2xs">
+   157→<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Kidepo Valley Foundation // 2024</span>
+   158→<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-forest-deep transition-colors">Kidepo Wilderness Archive</h3>
+   159→<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+   160→                A typography-first publication index cataloging three decades of field research in North-Eastern Uganda.
+   161→              </p>
+   162→</div>
+   163→<span class="font-label-md text-label-md text-primary underline underline-offset-4 decoration-border-subtle group-hover:decoration-terracotta-warm group-hover:text-terracotta-warm transition-all">
+   164→              Examine Publication →
+   165→            </span>
+   166→</div>
+   167→</article>
+   168→<!-- Project 4: Climate Action Atlas (Wide Feature - 8 cols) -->
+   169→<article class="gallery-item md:col-span-8 group bg-card-ivory rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="spatial impact">
+   170→<div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-high">
+   171→<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Clean minimal UI design mockups for a multi-regional climate dashboard showing rainfall anomaly graphs, glowing telemetry sensors mapped across Lake Victoria and the Kenyan highlands, elegant dark forest palette with sharp typography indicators." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Q1AQataznRiOsWolAFJiwNxjyycBVsScKA2qT2zz1yb6v9tWvzDrDXxy17OjaN4FVNdBsYJghWxsYGMBFo3HQHs2BzW5VK9SXg4B3xPj48twKgc0kYlZS6bj7S088WkB0OGeS9yPNwN6CdaRbfj7r7GL46DBfYlBSceqDJNrJ7dziqt-iZyFlYJSNJanL6iYIubel4dtXnYz1YLieshYE-jZUTc1TUlxgAD1LeceA_J3huMpXXCR"/>
+   172→<div class="absolute top-space-md left-space-md flex gap-space-2xs">
+   173→<span class="px-space-xs py-0.5 rounded-full bg-forest-deep/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Spatial Data</span>
+   174→<span class="px-space-xs py-0.5 rounded-full bg-terracotta-warm/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Impact</span>
+   175→</div>
+   176→</div>
+   177→<div class="p-space-xl flex flex-col justify-between flex-grow space-y-space-md">
+   178→<div class="space-y-space-xs">
+   179→<div class="flex items-center justify-between">
+   180→<span class="font-label-caps text-label-caps uppercase tracking-wider text-terracotta-warm">East African Climate Alliance</span>
+   181→<span class="material-symbols-outlined text-on-surface-variant group-hover:text-terracotta-warm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">arrow_outward</span>
+   182→</div>
+   183→<h3 class="font-headline-md text-headline-md text-primary group-hover:text-forest-deep transition-colors">Climate Action Atlas — Multi-Region Field Node Dashboard</h3>
+   184→<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+   185→                Unified data infrastructure aggregating sensor telemetry from 14 pastoral conservancies across Kenya, Uganda, and Tanzania to anticipate severe drought impacts.
+   186→              </p>
+   187→</div>
+   188→<span class="font-label-md text-label-md text-primary underline underline-offset-4 decoration-border-subtle group-hover:decoration-terracotta-warm group-hover:text-terracotta-warm transition-all">
+   189→              Launch Live Atlas Case →
+   190→            </span>
+   191→</div>
+   192→</article>
+   193→<!-- Project 5: Monolith Typographic Specimen (4 cols) -->
+   194→<article class="gallery-item md:col-span-5 group bg-card-ivory rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="editorial identity">
+   195→<div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-high">
+   196→<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Macro close-up shot of a custom serif font specimen poster printed on thick porous archival paper with warm copper ink accents, elegant typographic glyphs and ligatures demonstrating extreme high contrast serifs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgYY-WCdFexlh1zWv1FLoa0MNTKetiDxKctbpjMl0z0VmaVlASJvx_-qiyTfmBSt1iU5Ry4aLbnIf4UvtB7k9jBChni7hBri2-pbU550WrkzVh5ZhrV7qZYLKDJyHgVcgNf3fHj-p8qeDkmCctqr8MsXeci374vqNTWAFu72rGj_OYNO5__TddVwwOWKj4BbW6ApUpY4lwUVlQCW5zPn6lR4dpcPMeyZZblahgKJgZRyQbfcGQQaFL"/>
+   197→<div class="absolute top-space-md left-space-md">
+   198→<span class="px-space-xs py-0.5 rounded-full bg-slate-dark/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Typeface Design</span>
+   199→</div>
+   200→</div>
+   201→<div class="p-space-lg flex flex-col justify-between flex-grow space-y-space-md">
+   202→<div class="space-y-space-2xs">
+   203→<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Foundry Specimen // 2024</span>
+   204→<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-forest-deep transition-colors">Monolith Variable Serif Specimen</h3>
+   205→<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+   206→                A custom 18-style optical size variable serif drawn for Pan-African arts criticism journals and archival catalogs.
+   207→              </p>
+   208→</div>
+   209→<span class="font-label-md text-label-md text-primary underline underline-offset-4 decoration-border-subtle group-hover:decoration-terracotta-warm group-hover:text-terracotta-warm transition-all">
+   210→              Inspect Glyphs →
+   211→            </span>
+   212→</div>
+   213→</article>
+   214→<!-- Project 6: Nairobi Design Biennale (7 cols) -->
+   215→<article class="gallery-item md:col-span-7 group bg-card-ivory rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="identity editorial">
+   216→<div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-high">
+   217→<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Exhibition gallery setting in Nairobi with modern brutalist concrete walls, large format hanging silkscreen posters, interactive projection on a monolithic dark screen, visitors observing architectural models with warm accent gallery spot lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lKa77MPPlafXjo1ZE2cF8E_5wK0QS-0caqrUhClIpzSCLZ2goRrUamj2X39g9ASSeQlYMnc-sk-sOSVAKQP20NlL2IKv7U9nZQpj_AG8Yiyjr2BjAlPTDNo7BBgEhYT3K6-S0Kt-rXzV4Hm_3zrcAX_V91-yNwQb_F2yLox2lJWihTMFKpEdksw4nWufMiG2_qYTIsbqwpwbEt9WDjX3tT7KBKG-urbkS_3BgoY69-fQZG06j1Gp"/>
+   218→<div class="absolute top-space-md left-space-md">
+   219→<span class="px-space-xs py-0.5 rounded-full bg-forest-deep/90 backdrop-blur-sm text-canvas-cream font-label-caps text-label-caps uppercase tracking-wider">Biennale Exhibition</span>
+   220→</div>
+   221→</div>
+   222→<div class="p-space-lg flex flex-col justify-between flex-grow space-y-space-md">
+   223→<div class="space-y-space-2xs">
+   224→<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Nairobi Design Biennale // 2023</span>
+   225→<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-forest-deep transition-colors">Curatorial Scenography &amp; Digital Catalogue</h3>
+   226→<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+   227→                Visual identity system, responsive interactive archive, and spatial signage for 42 exhibiting contemporary architects.
+   228→              </p>
+   229→</div>
+   230→<span class="font-label-md text-label-md text-primary underline underline-offset-4 decoration-border-subtle group-hover:decoration-terracotta-warm group-hover:text-terracotta-warm transition-all">
+   231→              View Spatial Identity →
+   232→            </span>
+   233→</div>
+   234→</article>
+   235→</div>
+   236→</div>
+   237→</section>
+   238→<!-- Collaborative Team & Geographic Footprint Section -->
+   239→<section class="w-full py-space-4xl" id="impact-nodes">
+   240→<div class="max-w-7xl mx-auto px-margin-mobile md:px-space-xl lg:px-margin-desktop space-y-space-3xl">
+   241→<!-- Section Intro & Philosophy -->
+   242→<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
+   243→<div class="lg:col-span-8 space-y-space-xs">
+   244→<div class="flex items-center gap-space-xs">
+   245→<span class="w-2 h-0.5 bg-terracotta-warm"></span>
+   246→<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Collective Practice &amp; Footprint</span>
+   247→</div>
+   248→<h2 class="font-headline-xl text-headline-xl text-primary max-w-2xl">
+   249→            Rooted in East Africa, collaborating with institutions worldwide.
+   250→          </h2>
+   251→</div>
+   252→<div class="lg:col-span-4">
+   253→<p class="font-body-md text-body-md text-on-surface-variant">
+   254→            We operate as a decentralized studio collective. Our core researchers and technologists are embedded near the field environments we map and represent.
+   255→          </p>
+   256→</div>
+   257→</div>
+   258→<!-- Team Members Row (Referencing circular avatar + description structure in Reference Image) -->
+   259→<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+   260→<!-- Member 1 -->
+   261→<div class="group bg-card-ivory p-space-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-space-md">
+   262→<div class="relative w-28 h-28 rounded-full overflow-hidden bg-surface-container-high ring-4 ring-sage-soft/50 group-hover:ring-forest-deep transition-all duration-300">
+   263→<img class="w-full h-full object-cover" data-alt="Portrait of an African woman researcher with elegant short natural hair, wearing minimalist earthy linen shirt, warm natural daylight, thoughtful intelligent expression, warm studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1JtladNPhcdJQiHOpTp5TFrvDtiiE0MT3Rc1A8I-BD-iV6zGP7R-hyKAMJ84wfaQiOBFRykLPsvAU3hgIxsPyoNK4BG31j39Mf0p8tnEjGxd5KICL0qXE4Bw8x2DH0zWRV-j1s1B667fuxOTNRtPSM570j2yDcKQ6LgOszjZfUiH3KUKT6LbTASgCqEbiJ-8pYIwLQHHH5G1t9l8qCTy-VXNB1YnFU_2NGeo8fUVcvEyPsbWnVtnM"/>
+   264→</div>
+   265→<div class="space-y-space-2xs w-full">
+   266→<h3 class="font-headline-sm text-headline-sm text-primary">Dr. Amina Odhiambo</h3>
+   267→<span class="block font-label-caps text-label-caps uppercase tracking-wider text-forest-deep">Head of Strategic Research</span>
+   268→<div class="inline-flex items-center gap-1 text-on-surface-variant pt-1 font-label-caps text-label-caps">
+   269→<span class="material-symbols-outlined text-[14px]">location_on</span>
+   270→<span>Nairobi Hub</span>
+   271→</div>
+   272→<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs line-clamp-3">
+   273→              Leading ethnographic field study and ecological policy alignment with 15+ years across UNESCO and pastoralist syndicates.
+   274→            </p>
+   275→</div>
+   276→</div>
+   277→<!-- Member 2 -->
+   278→<div class="group bg-card-ivory p-space-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-space-md">
+   279→<div class="relative w-28 h-28 rounded-full overflow-hidden bg-surface-container-high ring-4 ring-sage-soft/50 group-hover:ring-forest-deep transition-all duration-300">
+   280→<img class="w-full h-full object-cover" data-alt="Portrait of a young East African male spatial engineer with wireframe spectacles and a dark wool crewneck, smiling subtly, warm architectural office interior background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrFs3dK2amhJWDi6me-PzS2mIHhXrKfQt4KGsSmskN18cskrxlJcknGDgiaihUJs-tDWcLbcX9z2lowGde8Xz8WCmmEugHw0svw1LwTXm9r0Tx8AhZIDjJw2cnZazRBR-PE8jhYdTq3ye52mJpCVjvsJEAHOHQJArjM8Kx5wDeNtNI_9lZbK_ROVPnrmBY5cc4evd7tnITis9qw6xiIgk4bP0LXuq_w41QUBmIWf0J6QqQ24O1sfYj"/>
+   281→</div>
+   282→<div class="space-y-space-2xs w-full">
+   283→<h3 class="font-headline-sm text-headline-sm text-primary">Marcus Vance</h3>
+   284→<span class="block font-label-caps text-label-caps uppercase tracking-wider text-forest-deep">Principal Spatial Engineer</span>
+   285→<div class="inline-flex items-center gap-1 text-on-surface-variant pt-1 font-label-caps text-label-caps">
+   286→<span class="material-symbols-outlined text-[14px]">location_on</span>
+   287→<span>Kampala Node</span>
+   288→</div>
+   289→<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs line-clamp-3">
+   290→              Specialist in real-time GL cartography, WebGIS pipelines, and open-source geospatial compute architectures.
+   291→            </p>
+   292→</div>
+   293→</div>
+   294→<!-- Member 3 -->
+   295→<div class="group bg-card-ivory p-space-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-space-md">
+   296→<div class="relative w-28 h-28 rounded-full overflow-hidden bg-surface-container-high ring-4 ring-sage-soft/50 group-hover:ring-forest-deep transition-all duration-300">
+   297→<img class="w-full h-full object-cover" data-alt="Portrait of a Kenyan woman environmental data scientist outdoors in golden hour savannah sunlight, holding field telemetry gear, warm terracotta lighting, confident gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3mxMFg9sUDT2-NOGeGwfo7sB2_afWwkD2Rfpbnnfk_N7mpWvh0iG4poP6PwiSerlUogbmQSsJicybz9hTrInQdIeuxSGMR13UyVkPOcCf3AZHIS0TQXsbthv0c5G6xqLX-x1_thBY0mwi41jztjXBvVHhP1cC6Bq4F7k0MQQMYSAcBzx-JsP4MRZL_7VuVNoslAM1pRqt7kImZLLyWEW2MUqPQlegO1c-SH2Xl_rLUwMKCXiMckA_"/>
+   298→</div>
+   299→<div class="space-y-space-2xs w-full">
+   300→<h3 class="font-headline-sm text-headline-sm text-primary">Sarah Kiprop</h3>
+   301→<span class="block font-label-caps text-label-caps uppercase tracking-wider text-forest-deep">Conservation Data Lead</span>
+   302→<div class="inline-flex items-center gap-1 text-on-surface-variant pt-1 font-label-caps text-label-caps">
+   303→<span class="material-symbols-outlined text-[14px]">location_on</span>
+   304→<span>Maasai Mara Hub</span>
+   305→</div>
+   306→<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs line-clamp-3">
+   307→              Oversees telemetry sensor deployments, biometric camera trap classification, and biodiversity index reporting.
+   308→            </p>
+   309→</div>
+   310→</div>
+   311→<!-- Member 4 -->
+   312→<div class="group bg-card-ivory p-space-lg rounded-lg shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-space-md">
+   313→<div class="relative w-28 h-28 rounded-full overflow-hidden bg-surface-container-high ring-4 ring-sage-soft/50 group-hover:ring-forest-deep transition-all duration-300">
+   314→<img class="w-full h-full object-cover" data-alt="Portrait of a creative software technologist with locs in a coastal studio setting, wearing charcoal linen, subtle ocean light through louvers, thoughtful creative portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKZxmSI7m62gxC9pI-MdKkTf3U0Ttq1IlJkrffJNSxgczpLvMM-BfqS52EPx4hQASZeUWMF657mmjF73iVSz9Bo-MjiKlqMAC5Ssvfk44uuWHb_BeKcn3c88GSbjvF4DfqwGYdx74l0liQbUnSUZDD6Xu8T4IM_2t4qM994eGBdcU7u3QP2cQaoZgyNUuVn4b1lbYwZf9cVsNIMZefHx2ruklO3Q1yNLrT0CfWpPSbOpxrl7WzP8RQ"/>
+   315→</div>
+   316→<div class="space-y-space-2xs w-full">
+   317→<h3 class="font-headline-sm text-headline-sm text-primary">David Omondi</h3>
+   318→<span class="block font-label-caps text-label-caps uppercase tracking-wider text-forest-deep">Interactive Technologist</span>
+   319→<div class="inline-flex items-center gap-1 text-on-surface-variant pt-1 font-label-caps text-label-caps">
+   320→<span class="material-symbols-outlined text-[14px]">location_on</span>
+   321→<span>Mombasa Coastal Lab</span>
+   322→</div>
+   323→<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-xs line-clamp-3">
+   324→              Architecting bespoke sensory web experiences, lightweight low-bandwidth interfaces, and physical data installations.
+   325→            </p>
+   326→</div>
+   327→</div>
+   328→</div>
+   329→<!-- Geographic Map Hub Display (Directly Referencing the Satellite Map with Field Pins in Image 1) -->
+   330→<div class="relative w-full rounded-xl overflow-hidden bg-slate-dark shadow-xl text-canvas-cream">
+   331→<!-- Cartographic Visual Wrapper -->
+   332→<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+   333→<!-- Left Visual Map Canvas (8 cols) -->
+   334→<div class="lg:col-span-8 relative min-h-[360px] lg:min-h-full overflow-hidden bg-[#0c1613]">
+   335→<!-- Stylized Satellite Vector Background -->
+   336→<div class="w-full h-full bg-cover bg-center opacity-85 hover:opacity-95 transition-opacity duration-500" data-alt="Topographic night satellite view of East Africa, depicting Kenya, Uganda, Kampala, Lake Victoria, Maasai Mara and the Indian Ocean coastline with glowing terracotta node markers and soft cartographic border coordinates." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcY2lc2RU_gM8defTJSAWs9Fvs5RjfVppjan6gd2cW68jgkcuzcXZ3LPf9M64ZcYqUs4dSC_k8qvL4NsG8-chuATSb6taDd8yn0RtyFImN9DM2c8lkqLMLRvHgSyBqArX-cWEaDo_fEtbXWUQkLD6GmkTwDRp3vAtSMDMFIQjFQGOesyMhxzW__ux3tG2uI3VnSGKARmSKXggtAAugsOAZHw9jkn0w5DUDwUudnVVX1MoUQwoJuM6h')"></div>
+   337→<!-- Overlaid Glowing Hub Indicators (matching image reference nodes) -->
+   338→<!-- Kampala Node -->
+   339→<div class="absolute top-[38%] left-[28%] group cursor-pointer">
+   340→<div class="relative flex items-center justify-center">
+   341→<span class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-terracotta-warm opacity-75"></span>
+   342→<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-secondary-container"></span>
+   343→</div>
+   344→<div class="mt-1 -ml-6 bg-slate-dark/90 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-label-caps tracking-wider text-canvas-cream shadow-sm pointer-events-none">
+   345→                Kampala (0.3476° N)
+   346→              </div>
+   347→</div>
+   348→<!-- Maasai Mara Node -->
+   349→<div class="absolute top-[58%] left-[36%] group cursor-pointer">
+   350→<div class="relative flex items-center justify-center">
+   351→<span class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-terracotta-warm opacity-75"></span>
+   352→<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-secondary-container"></span>
+   353→</div>
+   354→<div class="mt-1 -ml-12 bg-slate-dark/90 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-label-caps tracking-wider text-canvas-cream shadow-sm pointer-events-none">
+   355→                Maasai Mara Hub
+   356→              </div>
+   357→</div>
+   358→<!-- Nairobi Central Node -->
+   359→<div class="absolute top-[52%] left-[44%] group cursor-pointer">
+   360→<div class="relative flex items-center justify-center">
+   361→<span class="animate-ping absolute inline-flex h-8 w-8 rounded-full bg-primary-fixed-dim opacity-60"></span>
+   362→<span class="relative inline-flex rounded-full h-4 w-4 bg-primary-fixed border-2 border-forest-deep"></span>
+   363→</div>
+   364→<div class="mt-1 -ml-8 bg-forest-deep/95 backdrop-blur-md px-2.5 py-0.5 rounded text-[10px] font-label-caps tracking-wider text-canvas-cream font-semibold shadow-md pointer-events-none">
+   365→                Nairobi Studio [HQ]
+   366→              </div>
+   367→</div>
+   368→<!-- Mombasa Node -->
+   369→<div class="absolute top-[72%] left-[54%] group cursor-pointer">
+   370→<div class="relative flex items-center justify-center">
+   371→<span class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-terracotta-warm opacity-75"></span>
+   372→<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-secondary-container"></span>
+   373→</div>
+   374→<div class="mt-1 -ml-6 bg-slate-dark/90 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-label-caps tracking-wider text-canvas-cream shadow-sm pointer-events-none">
+   375→                Mombasa (Coastal)
+   376→              </div>
+   377→</div>
+   378→<!-- Kidepo North Node -->
+   379→<div class="absolute top-[18%] left-[24%] group cursor-pointer">
+   380→<div class="relative flex items-center justify-center">
+   381→<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-sage-soft"></span>
+   382→</div>
+   383→<div class="mt-1 -ml-4 bg-slate-dark/90 px-1.5 py-0.5 rounded text-[9px] font-label-caps text-outline-variant pointer-events-none">
+   384→                Kidepo Field Stn.
+   385→              </div>
+   386→</div>
+   387→<!-- Cartographic Coordinate Tag Bottom Left -->
+   388→<div class="absolute bottom-space-md left-space-md bg-slate-dark/85 backdrop-blur-sm px-space-md py-space-xs rounded font-label-caps text-label-caps text-outline-variant flex items-center gap-space-sm">
+   389→<span class="w-1.5 h-1.5 rounded-full bg-forest-deep"></span>
+   390→<span>Rift Basin Telemetry Grid • Lat 1.2921 S, Lon 36.8219 E</span>
+   391→</div>
+   392→</div>
+   393→<!-- Right Interactive Telemetry Panel (4 cols) -->
+   394→<div class="lg:col-span-4 p-space-xl flex flex-col justify-between space-y-space-xl bg-forest-deep text-canvas-cream">
+   395→<div class="space-y-space-md">
+   396→<div class="flex items-center justify-between border-b border-white/10 pb-space-xs">
+   397→<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary-fixed-dim">Active Field Array</span>
+   398→<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary-fixed-dim">
+   399→<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"></span> Synchronized
+   400→                </span>
+   401→</div>
+   402→<h4 class="font-headline-md text-headline-md text-canvas-cream">
+   403→                Regional Sensor Coordinates &amp; Active Field Nodes
+   404→              </h4>
+   405→<p class="font-body-sm text-body-sm text-outline-variant">
+   406→                Direct integration with regional parks, conservancies, and community ranger units ensures our digital products remain truthful to ground realities.
+   407→              </p>
+   408→</div>
+   409→<div class="space-y-space-sm">
+   410→<!-- Location Row 1 -->
+   411→<div class="flex items-center justify-between p-space-xs rounded bg-white/5 hover:bg-white/10 transition-colors">
+   412→<div>
+   413→<span class="font-label-md text-label-md text-canvas-cream block">Nairobi Studio &amp; HQ</span>
+   414→<span class="font-label-caps text-label-caps text-primary-fixed-dim">Research, Direction, Foundry</span>
+   415→</div>
+   416→<span class="font-label-caps text-label-caps text-secondary-fixed">Live Node</span>
+   417→</div>
+   418→<!-- Location Row 2 -->
+   419→<div class="flex items-center justify-between p-space-xs rounded bg-white/5 hover:bg-white/10 transition-colors">
+   420→<div>
+   421→<span class="font-label-md text-label-md text-canvas-cream block">Maasai Mara Conservancies</span>
+   422→<span class="font-label-caps text-label-caps text-primary-fixed-dim">Bio-acoustics &amp; GIS Feeds</span>
+   423→</div>
+   424→<span class="font-label-caps text-label-caps text-outline-variant">14 Arrays</span>
+   425→</div>
+   426→<!-- Location Row 3 -->
+   427→<div class="flex items-center justify-between p-space-xs rounded bg-white/5 hover:bg-white/10 transition-colors">
+   428→<div>
+   429→<span class="font-label-md text-label-md text-canvas-cream block">Kampala &amp; Kidepo Axis</span>
+   430→<span class="font-label-caps text-label-caps text-primary-fixed-dim">Spatial Engineering Node</span>
+   431→</div>
+   432→<span class="font-label-caps text-label-caps text-outline-variant">Active</span>
+   433→</div>
+   434→</div>
+   435→<div class="pt-space-xs border-t border-white/10">
+   436→<a class="inline-flex items-center justify-between w-full text-canvas-cream hover:text-terracotta-warm transition-colors font-label-md text-label-md py-space-2xs" href="mailto:inquiries@atelierstudio.com">
+   437→<span>Request Telemetry API Access</span>
+   438→<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+   439→</a>
+   440→</div>
+   441→</div>
+   442→</div>
+   443→</div>
+   444→</div>
+   445→</section>
+   446→<!-- Editorial Monograph Quotation Callout -->
+   447→<section class="w-full bg-sage-soft/30 py-space-3xl border-y border-border-subtle">
+   448→<div class="max-w-4xl mx-auto px-margin-mobile text-center space-y-space-md">
+   449→<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">The Studio Philosophy</span>
+   450→<blockquote class="font-headline-lg text-headline-lg text-primary italic leading-relaxed">
+   451→        “We design interfaces not simply as ephemeral software, but as lasting digital monuments — engineered with the same endurance, reverence, and contextual weight as architectural stonework.”
+   452→      </blockquote>
+   453→<div class="pt-space-xs flex items-center justify-center gap-space-sm">
+   454→<span class="w-6 h-0.5 bg-forest-deep"></span>
+   455→<span class="font-label-caps text-label-caps uppercase tracking-wider text-forest-deep">Atelier Studio Manifesto, Vol. IV</span>
+   456→<span class="w-6 h-0.5 bg-forest-deep"></span>
+   457→</div>
+   458→</div>
+   459→</section>
+   460→<!-- Inline Interaction Logic for Filter Pills -->
+   461→<script>
+   462→    document.addEventListener('DOMContentLoaded', () => {
+   463→      const filterButtons = document.querySelectorAll('#filter-container .filter-btn');
+   464→      const galleryItems = document.querySelectorAll('#gallery-grid .gallery-item');
+   465→
+   466→      filterButtons.forEach(button => {
+   467→        button.addEventListener('click', () => {
+   468→          // Toggle active classes
+   469→          filterButtons.forEach(btn => {
+   470→            btn.classList.remove('bg-slate-dark', 'text-canvas-cream');
+   471→            btn.classList.add('bg-surface', 'text-on-surface');
+   472→          });
+   473→
+   474→          button.classList.remove('bg-surface', 'text-on-surface');
+   475→          button.classList.add('bg-slate-dark', 'text-canvas-cream');
+   476→
+   477→          const filterValue = button.getAttribute('data-filter');
+   478→
+   479→          galleryItems.forEach(item => {
+   480→            const categories = item.getAttribute('data-category') || '';
+   481→            if (filterValue === 'all' || categories.includes(filterValue)) {
+   482→              item.style.display = 'flex';
+   483→              item.style.opacity = '0';
+   484→              setTimeout(() => {
+   485→                item.style.transition = 'opacity 300ms ease';
+   486→                item.style.opacity = '1';
+   487→              }, 30);
+   488→            } else {
+   489→              item.style.display = 'none';
+   490→            }
+   491→          });
+   492→        });
+   493→      });
+   494→    });
+   495→  </script>
+   496→</div></main><footer class="w-full bg-card-ivory border-t border-border-subtle"><div class="max-w-7xl mx-auto px-margin-mobile md:px-space-xl lg:px-margin-desktop py-space-3xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl pb-space-3xl border-b border-border-subtle"><div class="lg:col-span-8 flex flex-col justify-between space-y-space-xl"><div class="space-y-space-md"><span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Inquiries &amp; Commissions</span><h2 class="font-headline-xl text-headline-xl text-primary max-w-2xl">Let’s create something timeless together.</h2></div><div><a class="inline-flex items-center gap-space-xs font-headline-md text-headline-md text-on-surface underline underline-offset-8 decoration-border-subtle hover:text-terracotta-warm hover:decoration-terracotta-warm transition-all duration-300" href="mailto:inquiries@atelierstudio.com"><span>inquiries@atelierstudio.com</span><span class="material-symbols-outlined text-[24px]">arrow_outward</span></a></div></div><div class="lg:col-span-4 flex flex-col justify-between space-y-space-xl"><div class="space-y-space-sm p-space-lg bg-surface rounded border border-border-subtle"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-forest-deep animate-pulse"></span><span class="font-label-caps text-label-caps uppercase tracking-wider text-forest-deep">Studio Status</span></div><p class="font-body-md text-body-md text-on-surface">Nairobi / GMT+3 — Available for Q2/Q3 projects</p><p class="font-body-sm text-body-sm text-on-surface-variant">Accepting select architecture, editorial, and digital curation briefs.</p></div><div class="space-y-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Network &amp; Index</span><div class="flex flex-wrap gap-x-space-lg gap-y-space-xs"><a class="font-label-md text-label-md text-on-surface hover:text-terracotta-warm transition-colors duration-200" href="#">LinkedIn</a><a class="font-label-md text-label-md text-on-surface hover:text-terracotta-warm transition-colors duration-200" href="#">ReadCV</a><a class="font-label-md text-label-md text-on-surface hover:text-terracotta-warm transition-colors duration-200" href="#">Twitter</a><a class="font-label-md text-label-md text-on-surface hover:text-terracotta-warm transition-colors duration-200" href="#">GitHub</a></div></div></div></div><div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 Atelier Editorial Studio. All rights reserved.</p><div class="flex items-center gap-space-lg font-label-caps text-label-caps uppercase"><a class="hover:text-primary transition-colors duration-200" href="#">Colophon</a><a class="hover:text-primary transition-colors duration-200" href="#">Privacy &amp; Terms</a><a class="hover:text-primary transition-colors duration-200" href="#">Archive Index</a></div></div></div></footer></body></html>

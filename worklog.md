@@ -78,3 +78,24 @@ Stage Summary:
 - Palette now exactly matches csakenya.org header: maroon #AA475A, green #14954F/#005028, amber #F0A032 on white
 - Kenya outline is the template's exact map image (same asset), with pins for the 12 YACs' 5 counties
 - Single portfolio page structure preserved; all flows re-verified
+
+---
+Task ID: 5
+Agent: Super Z (main agent)
+Task: De-AI the visual language — adopt the Atelier Editorial system from the user's zip (stitch_editorial_minimalist_portfolio.zip): exact fonts (Newsreader + Manrope), authentic boxes/circles/HUD per user request "use the fonts used with the zip file i had attached and make the boxes circles the HUD that encapsulates the YACs more Authentic and Original"
+
+Work Log:
+- Extracted the zip's design system (DESIGN.md + code.html): Newsreader (editorial serif, italic accents) + Manrope (structural sans, label-caps 0.08em tracking), canvas #FAF7F2 / ivory #F3EFEA / hairline #E5DFD7 / pine #002619 / forest #133D2D / terracotta #D35A38 / sage #E2E8E3 / slate-dark #161B18, 2px radii, flat tonal depth (no drop shadows except ultra-soft hover)
+- layout.tsx: replaced Plus Jakarta Sans + Geist Mono with next/font Newsreader (400/500 + italics) + Manrope (400–700) — the zip's exact families, wired as --font-serif / --font-sans
+- globals.css: full Atelier token rebuild (--color-canvas/ivory/line/ink/ink-soft/pine/forest/moss/terra/sage/slatedark/charcoal), .caps-label utility mirroring label-caps, warm peach selection (#ffdbd1/#3b0900), archival scrollbar, 2px focus radius, restrained pin-ping; removed all CSA navy/cyan/gold + maroon/amber tokens
+- page.tsx: editorial masthead (hairline-bordered serif wordmark "Y — YAC — Digital Portfolio", caps attribution, slate-dark CTA hover→terracotta), asymmetric hero (Nº 01 eyebrow, 4.25rem Newsreader display with italic terracotta "policy evidence", stats strip 12/05/100% in serif), numbered sections (Nº 02 Portfolios, Nº 03 Field Footprint) with hairline rules, hairline archive grid (gap-px bg-line — cards as plates on one specimen sheet), colophon footer
+- ChampionCard: deleted every AI tell (rounded-3xl, gradient forest band, dot-grid overlay, overlapping ringed avatar circle, amber age bubble, icon chips); now ivory plate + matted square portrait (internal matte padding, 1.02 hover scale), serif Newsreader name, terracotta caps role, hairline meta row (county—age—verified), bordered sage pillar pills, understated underlined "View Portfolio" link, serif italic "Nº 01" plate stamp
+- ChampionModal: paper dossier on canvas — matted 4:5 plate portrait, serif 4xl name, caps role/meta, italic serif blockquote with terracotta rule, five numbered archive sections (01 Biography … 05 Affiliations) with hairline heads + serif italic indices, outline pills for competencies, sage pills for pillars, hairline archive rows for affiliations; all icon-soup removed
+- KenyaFootprint: kept the exact template Kenya map image; panel recast as ledger — caps header row, serif h3 with italic moss accent, hairline county rows with serif count circles, restrained pins (moss hub + terracotta counties, single subtle ping), caps coordinate tag
+- Debugged stale Turbopack CSS artifact (new utilities absent from served chunk → transparent modal); fixed by clearing .next + dev server restart
+- Verified: bun lint clean; agent-browser — desktop 1440 (hero, grid, map ledger, colophon), modal open/scroll/close, mobile 390 (no horizontal overflow), Newsreader confirmed on h1 via computed style, zero console errors
+
+Stage Summary:
+- The portfolio now speaks the zip's authentic Atelier Editorial language: Newsreader/Manrope, cream/ivory/forest/terracotta, hairline boxes, matted rectangular plates, caps-label metadata, serif italic accents — no gradients, glow circles, or generic AI UI patterns
+- Kenya outline remains the template's exact map asset; single-page structure and 12/12 verified data untouched
+- All flows re-verified end-to-end (desktop, mobile, modal, zero console errors)

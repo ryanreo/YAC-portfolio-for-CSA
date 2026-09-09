@@ -7,96 +7,120 @@ import { ChampionModal } from '@/components/yac/ChampionModal';
 import { KenyaFootprint } from '@/components/yac/KenyaFootprint';
 import { CHAMPIONS, type YACProfile } from '@/lib/yac';
 
+const STATS = [
+  { value: '12', label: 'Champions' },
+  { value: '05', label: 'Counties' },
+  { value: '100%', label: 'Data verified' },
+] as const;
+
 export default function Home() {
   const [selected, setSelected] = useState<YACProfile | null>(null);
 
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      {/* ── CSA Kenya maroon top strip ── */}
-      <div aria-hidden="true" className="h-1.5 w-full bg-maroon" />
-
-      {/* ── Brand + portfolio intro (white, CSA style) ── */}
-      <header className="relative overflow-hidden border-b border-slate-100 bg-white">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-32 -top-32 h-[380px] w-[380px] rounded-full bg-csa-50 blur-[110px]"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-32 bottom-[-60%] h-[300px] w-[300px] rounded-full bg-amber-50 blur-[110px]"
-        />
-
-        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-6 sm:px-6 sm:pb-16 lg:px-8">
-          {/* Brand row */}
-          <div className="flex items-center gap-3">
+    <div className="flex min-h-screen flex-col bg-canvas text-ink">
+      {/* ── Masthead — hairline editorial header ── */}
+      <header className="no-print sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-16">
+          <a href="#top" className="flex items-center gap-3">
             <span
-              className="grid h-9 w-9 place-items-center rounded-lg bg-forest text-sm font-extrabold text-white"
               aria-hidden="true"
+              className="grid h-8 w-8 place-items-center rounded-[2px] border border-line bg-ivory font-serif text-base italic text-pine"
             >
-              YAC
+              Y
             </span>
-            <div className="leading-tight">
-              <p className="text-[13px] font-extrabold tracking-tight text-forest">
-                YAC Digital Portfolio
-              </p>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-csa-600">
-                CSA Kenya • INSPIRE Lab
-              </p>
-            </div>
-          </div>
-
-          {/* Intro */}
-          <div className="fade-up mt-12 max-w-3xl sm:mt-14">
-            <p className="inline-flex items-center gap-2 rounded-full bg-csa-50 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-forest ring-1 ring-csa/20">
-              <ShieldCheck className="h-3.5 w-3.5 text-amber-600" aria-hidden="true" />
-              One cohort • 12 portfolios
-            </p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-[#26312b] sm:text-5xl">
-              The 12 YACs —{' '}
-              <span className="text-csa-600">Youth Advocacy Champions</span> of Kenya
-            </h1>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-600">
-              Legal reform, GIS &amp; spatial data, health communication, and grassroots
-              mobilisation — twelve verified young leaders turning frontline adolescent
-              lived experience into evidence-based policy. Open any profile to explore
-              their portfolio.
-            </p>
-            <p className="mt-6 flex items-center gap-2 text-xs font-medium text-slate-500">
-              <ShieldCheck className="h-4 w-4 text-amber-600" aria-hidden="true" />
-              All 12 ages &amp; counties verified • Zero-inference data policy
-            </p>
+            <span className="leading-tight">
+              <span className="block font-serif text-lg tracking-[-0.01em] text-pine">
+                YAC — Digital Portfolio
+              </span>
+              <span className="caps-label block text-[9px] text-ink-soft">CSA Kenya · INSPIRE Lab</span>
+            </span>
+          </a>
+          <div className="flex items-center gap-6">
+            <span className="caps-label hidden text-[9px] text-ink-soft md:block">
+              Nairobi, Kenya — 2026
+            </span>
+            <a
+              href="#portfolios"
+              className="hidden rounded-[2px] bg-slatedark px-4 py-2 text-[13px] font-medium text-canvas transition-colors duration-300 hover:bg-terra sm:inline-block"
+            >
+              The Twelve Portfolios
+            </a>
           </div>
         </div>
       </header>
 
-      {/* ── The 12 portfolios ── */}
-      <main className="flex-1 bg-slate-csa">
+      {/* ── Nº 01 — The Cohort ── */}
+      <section id="top" className="border-b border-line">
+        <div className="mx-auto max-w-7xl px-4 pb-14 pt-14 sm:px-6 sm:pb-16 sm:pt-20 lg:px-16">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="fade-up lg:col-span-8">
+              <p className="caps-label text-terra">Nº 01 — The Cohort · Youth Advocacy Champions</p>
+              <h1 className="mt-6 max-w-3xl font-serif text-[2.5rem] leading-[1.06] tracking-[-0.03em] text-pine sm:text-6xl lg:text-[4.25rem]">
+                Twelve young Kenyans turning lived experience into{' '}
+                <em className="italic text-terra">policy evidence</em>.
+              </h1>
+            </div>
+            <div className="fade-up flex flex-col justify-end lg:col-span-4">
+              <p className="max-w-md text-[15px] leading-[1.65] text-ink-soft">
+                Legal reform, GIS &amp; spatial data, health communication, grassroots
+                mobilisation — the working portfolios of the 12 Youth Advocacy Champions,
+                verified county by county. Open any profile to read it in full.
+              </p>
+              <p className="caps-label mt-5 flex items-center gap-2 text-[9px] text-ink-soft">
+                <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-forest" aria-hidden="true" />
+                All 12 ages &amp; counties verified — zero-inference policy
+              </p>
+            </div>
+          </div>
+
+          {/* Stats strip */}
+          <div className="mt-14 grid grid-cols-3 gap-6 border-t border-line pt-6 sm:mt-16">
+            {STATS.map((s) => (
+              <div key={s.label}>
+                <p className="font-serif text-4xl tracking-[-0.02em] text-pine sm:text-5xl">{s.value}</p>
+                <p className="caps-label mt-2 text-[9px] text-ink-soft">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Nº 02 — The portfolios ── */}
+      <main className="flex-1">
         <section
           aria-label="The 12 champion portfolios"
-          className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8"
+          className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16"
         >
-          <h2 className="sr-only">The 12 champion portfolios</h2>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {CHAMPIONS.map((c) => (
-              <ChampionCard key={c.id} champion={c} onSelect={setSelected} />
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-6">
+            <div>
+              <p className="caps-label text-terra">Nº 02 — Portfolios</p>
+              <h2 className="mt-3 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
+                Selected champions &amp; <em className="italic text-forest">field profiles</em>
+              </h2>
+            </div>
+            <p className="caps-label text-[9px] text-ink-soft">12 profiles — 2024–2026</p>
+          </div>
+
+          {/* Hairline archive grid — one specimen sheet, twelve plates */}
+          <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+            {CHAMPIONS.map((c, i) => (
+              <ChampionCard key={c.id} champion={c} index={i} onSelect={setSelected} />
             ))}
           </div>
         </section>
 
-        {/* ── Footprint map (exact template Kenya outline) ── */}
-        <section
-          aria-label="Sub-national footprint"
-          className="border-t border-slate-100 bg-white"
-        >
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
-            <div className="mb-8 max-w-2xl">
-              <p className="section-label">Footprint</p>
-              <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#26312b] sm:text-4xl">
-                Where the 12 YACs work
+        {/* ── Nº 03 — Field footprint ── */}
+        <section aria-label="Sub-national footprint" className="border-t border-line">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16">
+            <div className="mb-10 max-w-2xl border-b border-line pb-6">
+              <p className="caps-label text-terra">Nº 03 — Field Footprint</p>
+              <h2 className="mt-3 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
+                Where the twelve <em className="italic text-forest">work</em>
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              <p className="mt-4 max-w-xl text-[15px] leading-[1.65] text-ink-soft">
                 Live cohort distribution across five operational counties — from the Lake
-                Victoria basin to the capital&apos;s policy hub and the coastal climate corridor.
+                Victoria basin to the capital&apos;s policy hub and the coastal climate
+                corridor.
               </p>
             </div>
             <KenyaFootprint />
@@ -104,14 +128,14 @@ export default function Home() {
         </section>
       </main>
 
-      {/* ── Minimal footer ── */}
-      <footer className="mt-auto bg-forest text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-6 text-center sm:flex-row sm:px-6 sm:text-left lg:px-8">
-          <p className="text-xs font-bold">
-            YAC Digital Portfolio — the 12 Youth Advocacy Champions
+      {/* ── Colophon ── */}
+      <footer className="no-print border-t border-line bg-canvas">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-16">
+          <p className="font-serif text-base tracking-[-0.01em] text-pine">
+            YAC Digital Portfolio — The Twelve
           </p>
-          <p className="text-[11px] font-medium text-white/55">
-            Centre for the Study of Adolescence (CSA Kenya) • csakenya.org
+          <p className="caps-label text-[9px] text-ink-soft">
+            Centre for the Study of Adolescence (CSA Kenya) · csakenya.org
           </p>
         </div>
       </footer>

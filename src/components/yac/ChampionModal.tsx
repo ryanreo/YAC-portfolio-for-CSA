@@ -8,19 +8,18 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import { PILLAR_SHORT, type YACProfile } from '@/lib/yac';
-import {
-  MapPin,
-  ShieldCheck,
-  GraduationCap,
-  Quote,
-  Building2,
-  Wrench,
-  Cake,
-  Handshake,
-} from 'lucide-react';
+
+function SectionHead({ title, index }: { title: string; index: string }) {
+  return (
+    <div className="flex items-baseline justify-between border-b border-line pb-2.5">
+      <h4 className="caps-label text-[10px] text-pine">{title}</h4>
+      <span className="font-serif text-xs italic text-ink-soft/60" aria-hidden="true">
+        {index}
+      </span>
+    </div>
+  );
+}
 
 export function ChampionModal({
   champion,
@@ -39,154 +38,120 @@ export function ChampionModal({
 
   return (
     <Dialog open={!!champion} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-h-[88vh] overflow-y-auto border-slate-200 p-0 sm:max-w-2xl">
+      <DialogContent className="max-h-[88vh] overflow-y-auto rounded-sm border-line bg-canvas p-0 text-ink sm:max-w-2xl">
         {champion && (
           <div>
-            {/* Header band */}
-            <div className="relative bg-gradient-to-br from-forest via-forest-700 to-forest-600 px-6 pb-16 pt-7 text-white sm:px-8">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 opacity-[0.07]"
-                style={{
-                  backgroundImage: 'radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)',
-                  backgroundSize: '18px 18px',
-                }}
-              />
-              <DialogHeader className="relative text-left">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <span className="relative mx-auto block h-28 w-28 shrink-0 overflow-hidden rounded-full ring-4 ring-amber/70 sm:mx-0">
+            {/* Plate header */}
+            <div className="border-b border-line p-6 sm:p-8">
+              <DialogHeader className="text-left">
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                  <span className="relative mx-auto block aspect-[4/5] w-36 shrink-0 overflow-hidden rounded-[2px] bg-sage/50 sm:mx-0">
                     {champion.headshotUrl ? (
                       <Image
                         src={champion.headshotUrl}
                         alt={`Portrait of ${champion.fullName}`}
                         fill
-                        sizes="112px"
+                        sizes="144px"
                         className="object-cover"
                       />
                     ) : (
-                      <span className="grid h-full w-full place-items-center bg-csa-50 text-2xl font-extrabold text-csa-600">
+                      <span className="grid h-full w-full place-items-center font-serif text-3xl italic text-forest">
                         {initials}
                       </span>
                     )}
                   </span>
                   <div className="text-center sm:text-left">
-                    <DialogTitle className="text-2xl font-extrabold tracking-tight">
+                    <p className="caps-label text-[9.5px] leading-relaxed text-terra">
+                      {champion.primaryRole}
+                    </p>
+                    <DialogTitle className="mt-2 font-serif text-3xl font-normal leading-[1.1] tracking-[-0.02em] text-pine sm:text-4xl">
                       {champion.fullName}
                     </DialogTitle>
-                    <DialogDescription className="mt-1 text-sm font-semibold text-csa-50">
-                      {champion.primaryRole}
+                    <DialogDescription className="caps-label mt-4 text-[9px] text-ink-soft">
+                      {champion.county} County — {champion.age} Years
+                      {champion.verified ? ' — Data Verified' : ''}
                     </DialogDescription>
-                    <div className="mt-3 flex flex-wrap justify-center gap-1.5 sm:justify-start">
-                      <span className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ring-1 ring-white/15">
-                        <MapPin className="h-3 w-3 text-amber" aria-hidden="true" />
-                        {champion.county} County
-                      </span>
-                      <span className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ring-1 ring-white/15">
-                        <Cake className="h-3 w-3 text-amber" aria-hidden="true" />
-                        {champion.age} years
-                      </span>
-                      {champion.verified && (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-amber/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-amber ring-1 ring-amber/30">
-                          <ShieldCheck className="h-3 w-3" aria-hidden="true" />
-                          Data Verified
-                        </span>
-                      )}
-                    </div>
                   </div>
                 </div>
               </DialogHeader>
             </div>
 
-            {/* Body */}
-            <div className="space-y-6 px-6 py-6 sm:px-8">
+            {/* Dossier body */}
+            <div className="space-y-8 p-6 sm:p-8">
               {champion.impactTagline && (
-                <blockquote className="flex items-start gap-3 rounded-2xl border-l-4 border-amber bg-amber-50 p-4">
-                  <Quote className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" aria-hidden="true" />
-                  <div>
-                    <p className="text-sm font-bold leading-relaxed text-forest">
-                      &ldquo;{champion.impactTagline}&rdquo;
-                    </p>
-                    <cite className="mt-1 block text-[10px] font-bold uppercase tracking-[0.14em] text-amber-600 not-italic">
-                      Lived Experience → Policy Impact
-                    </cite>
-                  </div>
+                <blockquote className="border-l-2 border-terra pl-5">
+                  <p className="font-serif text-xl italic leading-[1.4] tracking-[-0.01em] text-forest">
+                    &ldquo;{champion.impactTagline}&rdquo;
+                  </p>
+                  <cite className="caps-label mt-3 block text-[9px] not-italic text-ink-soft">
+                    Lived Experience — Policy Impact
+                  </cite>
                 </blockquote>
               )}
 
-              {/* Bio */}
+              {/* 01 — Biography */}
               <section aria-label="Biography">
-                <h4 className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-csa-600">Biography</h4>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{champion.shortBio}</p>
+                <SectionHead title="Biography" index="01" />
+                <p className="mt-3 text-sm leading-[1.7] text-ink-soft">{champion.shortBio}</p>
                 {champion.fullBio && (
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">{champion.fullBio}</p>
+                  <p className="mt-3 text-sm leading-[1.7] text-ink-soft">{champion.fullBio}</p>
                 )}
               </section>
 
-              <Separator />
-
-              {/* Academic background */}
-              <section aria-label="Academic background" className="flex items-start gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-csa-50">
-                  <GraduationCap className="h-4.5 w-4.5 text-csa-600" aria-hidden="true" />
-                </span>
-                <div>
-                  <h4 className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-csa-600">
-                    Academic Background
-                  </h4>
-                  <p className="mt-1 text-sm font-semibold text-forest">{champion.academicBackground}</p>
-                </div>
+              {/* 02 — Academic background */}
+              <section aria-label="Academic background">
+                <SectionHead title="Academic Background" index="02" />
+                <p className="mt-3 font-serif text-lg leading-snug tracking-[-0.01em] text-pine">
+                  {champion.academicBackground}
+                </p>
               </section>
 
-              {/* Skills */}
-              <section aria-label="Skills and tools">
-                <h4 className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.16em] text-csa-600">
-                  <Wrench className="h-3.5 w-3.5" aria-hidden="true" />
-                  Competencies &amp; Tools
-                </h4>
-                <div className="mt-2.5 flex flex-wrap gap-1.5">
+              {/* 03 — Competencies & tools */}
+              <section aria-label="Competencies and tools">
+                <SectionHead title="Competencies &amp; Tools" index="03" />
+                <div className="mt-3.5 flex flex-wrap gap-1.5">
                   {champion.skillsAndTools.map((s) => (
-                    <Badge
+                    <span
                       key={s}
-                      className="rounded-full bg-forest px-3 py-1 text-[11px] font-bold text-white hover:bg-forest-700"
+                      className="rounded-full border border-line bg-ivory px-3 py-1.5 text-[11px] font-medium text-ink-soft"
                     >
                       {s}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </section>
 
-              {/* Pillars */}
+              {/* 04 — Thematic pillars */}
               <section aria-label="Thematic pillars">
-                <h4 className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-csa-600">
-                  Thematic Pillars
-                </h4>
-                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                <SectionHead title="Thematic Pillars" index="04" />
+                <div className="mt-3.5 flex flex-wrap gap-1.5">
                   {champion.thematicPillars.map((p) => (
-                    <Badge
+                    <span
                       key={p}
-                      variant="outline"
-                      className="rounded-full border-csa/40 bg-csa-50 px-3 py-1 text-[11px] font-bold text-csa-600"
+                      className="rounded-full bg-sage/70 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-forest"
                     >
                       {PILLAR_SHORT[p]}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </section>
 
-              {/* Affiliations */}
-              <section aria-label="Affiliations">
-                <h4 className="flex items-center gap-2 text-[11px] font-extrabold uppercase tracking-[0.16em] text-csa-600">
-                  <Building2 className="h-3.5 w-3.5" aria-hidden="true" />
-                  Affiliations &amp; Movements
-                </h4>
-                <ul className="mt-2.5 grid gap-1.5 sm:grid-cols-2">
-                  {champion.affiliations.map((a) => (
+              {/* 05 — Affiliations */}
+              <section aria-label="Affiliations and movements">
+                <SectionHead title="Affiliations &amp; Movements" index="05" />
+                <ul className="mt-1">
+                  {champion.affiliations.map((a, i) => (
                     <li
                       key={a}
-                      className="flex items-start gap-2 rounded-xl bg-slate-csa px-3 py-2 text-xs font-medium leading-snug text-forest/80"
+                      className="flex items-baseline gap-4 border-b border-line py-2.5 last:border-b-0"
                     >
-                      <Handshake className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-600" aria-hidden="true" />
-                      {a}
+                      <span
+                        className="shrink-0 font-serif text-xs italic text-ink-soft/60"
+                        aria-hidden="true"
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-[13px] leading-snug text-ink-soft">{a}</span>
                     </li>
                   ))}
                 </ul>

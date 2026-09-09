@@ -1,17 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-import { Badge } from '@/components/ui/badge';
 import { PILLAR_SHORT, type YACProfile } from '@/lib/yac';
-import { MapPin, ShieldCheck, Quote, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck } from 'lucide-react';
 
 export function ChampionCard({
   champion,
+  index,
   onSelect,
 }: {
   champion: YACProfile;
+  index: number;
   onSelect: (c: YACProfile) => void;
 }) {
+  const num = String(index + 1).padStart(2, '0');
   const initials = champion.fullName
     .split(' ')
     .map((w) => w[0])
@@ -19,101 +21,84 @@ export function ChampionCard({
     .join('');
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-csa/40 hover:shadow-[0_16px_40px_-16px_rgba(0,80,40,0.28)]">
-      {/* Top: identity */}
-      <div className="relative bg-gradient-to-br from-forest via-forest-700 to-forest-600 px-5 pb-12 pt-6">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)',
-            backgroundSize: '18px 18px',
-          }}
-        />
-        <div className="relative flex items-start justify-between">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white/90 ring-1 ring-white/15">
-              <MapPin className="h-3 w-3 text-amber" aria-hidden="true" />
-              {champion.county}
-            </span>
-            {champion.verified && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-amber/15 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-amber ring-1 ring-amber/30">
-                <ShieldCheck className="h-3 w-3" aria-hidden="true" />
-                Verified
-              </span>
-            )}
-          </div>
-          <span
-            className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-amber text-sm font-extrabold text-forest ring-2 ring-white/25"
-            aria-hidden="true"
-          >
-            {champion.age}
-            <span className="sr-only">years old</span>
-          </span>
-        </div>
-      </div>
-
-      {/* Photo overlapping card edge */}
+    <article className="group relative flex flex-col bg-ivory">
+      {/* Plate — matted portrait, template-style internal matte padding */}
       <button
         onClick={() => onSelect(champion)}
-        className="relative z-10 -mt-11 mx-auto block rounded-full outline-offset-4"
-        aria-label={`View full profile of ${champion.fullName}`}
+        aria-label={`View full portfolio of ${champion.fullName}`}
+        className="relative block w-full text-left"
       >
-        <span className="block rounded-full bg-white p-1 shadow-lg ring-1 ring-slate-200 transition-transform duration-300 group-hover:scale-[1.04]">
-          <span className="relative block h-24 w-24 overflow-hidden rounded-full">
+        <span className="block p-3 pb-0 sm:p-3.5 sm:pb-0">
+          <span className="relative block aspect-square w-full overflow-hidden rounded-[2px] bg-sage/50">
             {champion.headshotUrl ? (
               <Image
                 src={champion.headshotUrl}
                 alt={`Portrait of ${champion.fullName}`}
                 fill
-                sizes="96px"
-                className="object-cover"
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-[400ms] ease-out group-hover:scale-[1.02]"
               />
             ) : (
-              <span className="grid h-full w-full place-items-center bg-csa-50 text-xl font-extrabold text-csa-600">
+              <span className="grid h-full w-full place-items-center font-serif text-3xl italic text-forest">
                 {initials}
               </span>
             )}
           </span>
         </span>
+        <span className="absolute left-3 top-3 rounded-full border border-line bg-canvas/95 px-2.5 py-1 font-serif text-[11px] italic leading-none text-pine sm:left-3.5 sm:top-3.5">
+          Nº {num}
+        </span>
       </button>
 
-      {/* Body */}
-      <div className="flex flex-1 flex-col px-5 pb-5 pt-3 text-center">
-        <h3 className="text-base font-extrabold tracking-tight text-forest">{champion.fullName}</h3>
-        <p className="mt-1 text-xs font-semibold text-csa-600">{champion.primaryRole}</p>
+      {/* Caption block */}
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <h3 className="font-serif text-xl leading-tight tracking-[-0.01em] text-pine">
+          {champion.fullName}
+        </h3>
+        <p className="caps-label mt-2 text-[9.5px] leading-relaxed text-terra">
+          {champion.primaryRole}
+        </p>
 
-        {champion.impactTagline && (
-          <p className="mt-3 flex items-start gap-1.5 rounded-xl bg-amber-50 p-2.5 text-left text-[11px] font-medium leading-relaxed text-forest/80">
-            <Quote className="mt-0.5 h-3 w-3 shrink-0 text-amber-600" aria-hidden="true" />
-            {champion.impactTagline}
+        <div className="mt-4 border-t border-line pt-3">
+          <p className="caps-label flex flex-wrap items-center gap-x-2 gap-y-1 text-[9px] text-ink-soft">
+            <span>
+              {champion.county} County — {champion.age} yrs
+            </span>
+            {champion.verified && (
+              <span className="inline-flex items-center gap-1 text-forest">
+                <ShieldCheck className="h-3 w-3" aria-hidden="true" />
+                Verified
+              </span>
+            )}
           </p>
-        )}
+        </div>
 
-        <p className="mt-3 line-clamp-3 text-xs leading-relaxed text-slate-500">{champion.shortBio}</p>
+        <p className="mt-3 line-clamp-3 text-[13px] leading-[1.6] text-ink-soft">
+          {champion.shortBio}
+        </p>
 
-        {/* Pillars */}
-        <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+        <div className="mt-4 flex flex-wrap gap-1.5">
           {champion.thematicPillars.map((p) => (
-            <Badge
+            <span
               key={p}
-              variant="secondary"
-              className="rounded-full border border-slate-200 bg-slate-csa px-2.5 py-0.5 text-[10px] font-bold text-forest/70"
+              className="rounded-full border border-line bg-sage/60 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.08em] text-forest"
             >
               {PILLAR_SHORT[p]}
-            </Badge>
+            </span>
           ))}
         </div>
 
-        <div className="mt-auto pt-4">
+        <div className="mt-auto pt-5">
           <button
             onClick={() => onSelect(champion)}
-            className="inline-flex items-center gap-1 text-xs font-extrabold text-csa-600 transition-colors hover:text-forest"
             aria-label={`Open full profile of ${champion.fullName}`}
+            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-pine underline decoration-line underline-offset-4 transition-colors duration-200 hover:text-terra hover:decoration-terra"
           >
-            View full profile
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
+            View Portfolio
+            <ArrowUpRight
+              className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              aria-hidden="true"
+            />
           </button>
         </div>
       </div>
