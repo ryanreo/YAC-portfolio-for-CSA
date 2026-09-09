@@ -191,14 +191,26 @@ export default function DossierPage() {
 
       {/* ── Masthead ── */}
       <header className="border-b border-line bg-canvas px-4 py-8 sm:px-6 lg:px-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <div>
-            <span className="caps-label block text-[10px] text-terra">
-              Centre for the Study of Adolescence (CSA Kenya) · INSPIRE Lab
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-4">
+            <span className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white shadow-sm">
+              <Image
+                src="/csa-logo.png"
+                alt="Centre for the Study of Adolescence logo"
+                width={64}
+                height={64}
+                className="scale-[1.3] object-contain"
+                priority
+              />
             </span>
-            <h1 className="mt-1 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
-              YAC Digital Portfolio — Executive Dossier
-            </h1>
+            <div>
+              <span className="caps-label block text-[10px] text-terra">
+                Centre for the Study of Adolescence (CSA Kenya) · INSPIRE Lab
+              </span>
+              <h1 className="mt-1 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
+                YAC Digital Portfolio — Executive Dossier
+              </h1>
+            </div>
           </div>
           <div className="text-left sm:text-right">
             <p className="font-serif text-sm italic text-forest">The 12 Youth Advocacy Champions</p>
@@ -256,10 +268,21 @@ export default function DossierPage() {
 
       {/* ── Colophon ── */}
       <footer className="border-t border-line bg-canvas px-4 py-8 sm:px-6 lg:px-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-          <p className="font-serif text-sm text-pine">
-            YAC Digital Portfolio — Complete Executive Dossier
-          </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-3">
+            <span className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white">
+              <Image
+                src="/csa-logo.png"
+                alt="CSA Logo"
+                width={32}
+                height={32}
+                className="scale-[1.2] object-contain"
+              />
+            </span>
+            <p className="font-serif text-sm text-pine">
+              YAC Digital Portfolio — Complete Executive Dossier
+            </p>
+          </div>
           <p className="caps-label text-[9.5px] text-ink-soft">
             Centre for the Study of Adolescence (CSA Kenya) · csakenya.org
           </p>

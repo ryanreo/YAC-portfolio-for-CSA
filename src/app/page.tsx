@@ -142,10 +142,21 @@ export default function Home() {
 
       {/* ── Colophon ── */}
       <footer className="no-print border-t border-line bg-canvas">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-16">
-          <p className="font-serif text-base tracking-[-0.01em] text-pine">
-            YAC Digital Portfolio — The Twelve
-          </p>
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-4 py-8 sm:flex-row sm:items-center sm:px-6 lg:px-16">
+          <div className="flex items-center gap-3">
+            <span className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-white">
+              <Image
+                src="/csa-logo.png"
+                alt="CSA Logo"
+                width={32}
+                height={32}
+                className="scale-[1.2] object-contain"
+              />
+            </span>
+            <p className="font-serif text-base tracking-[-0.01em] text-pine">
+              YAC Digital Portfolio — The Twelve
+            </p>
+          </div>
           <div className="flex items-center gap-4">
             <Link
               href="/dossier"
