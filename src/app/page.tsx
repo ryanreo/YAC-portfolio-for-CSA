@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { ShieldCheck } from 'lucide-react';
 import { ChampionCard } from '@/components/yac/ChampionCard';
@@ -22,11 +23,15 @@ export default function Home() {
       <header className="no-print sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-16">
           <a href="#top" className="flex items-center gap-3">
-            <span
-              aria-hidden="true"
-              className="grid h-8 w-8 place-items-center rounded-[2px] border border-line bg-ivory font-serif text-base italic text-pine"
-            >
-              Y
+            <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full bg-white" aria-label="Centre for the Study of Adolescence logo">
+              <Image
+                src="/csa-logo.png"
+                alt=""
+                width={36}
+                height={36}
+                className="scale-[1.46] object-contain"
+                priority
+              />
             </span>
             <span className="leading-tight">
               <span className="block font-serif text-lg tracking-[-0.01em] text-pine">

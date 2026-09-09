@@ -57,13 +57,11 @@ export const PILLAR_SHORT: Record<ThematicPillar, string> = {
 
 export interface CountyMeta {
   name: KenyaCounty;
-  /** SVG map position within an 850 x 1000 viewBox (lon 33.5–42, lat 5 to -5) */
-  x: number;
-  y: number;
-  /** Label placement offsets to avoid pin collisions in the western cluster */
-  labelDx: number;
-  labelDy: number;
-  labelAnchor: 'start' | 'middle' | 'end';
+  /** County capital / operational-city centre in WGS84 decimal degrees. */
+  latitude: number;
+  longitude: number;
+  /** Human-readable place used by the map card and accessibility labels. */
+  location: string;
   /** Regional cluster per the Feature Wishlist */
   region: 'Lake Victoria Basin Cluster' | 'Capital & National Policy Hub' | 'Coastal Marine & Climate Corridor';
   regionNote: string;
@@ -72,51 +70,46 @@ export interface CountyMeta {
 export const COUNTY_META: CountyMeta[] = [
   {
     name: 'Nairobi',
-    x: 332,
-    y: 629,
-    labelDx: 0,
-    labelDy: 52,
-    labelAnchor: 'middle',
+    // Nairobi city centre — WGS84
+    latitude: -1.286389,
+    longitude: 36.817223,
+    location: 'Nairobi, Nairobi County',
     region: 'Capital & National Policy Hub',
     regionNote: 'Legal drafting, diplomacy, communications, media, health promotion',
   },
   {
     name: 'Kisumu',
-    x: 150,
-    y: 505,
-    labelDx: 42,
-    labelDy: 8,
-    labelAnchor: 'start',
+    // Kisumu city centre — WGS84
+    latitude: -0.10221,
+    longitude: 34.76171,
+    location: 'Kisumu, Kisumu County',
     region: 'Lake Victoria Basin Cluster',
     regionNote: 'High-burden adolescent health, GIS, community scorecards',
   },
   {
     name: 'Homa Bay',
-    x: 96,
-    y: 577,
-    labelDx: 0,
-    labelDy: 54,
-    labelAnchor: 'middle',
+    // Homa Bay town centre — WGS84
+    latitude: -0.52731,
+    longitude: 34.45714,
+    location: 'Homa Bay, Homa Bay County',
     region: 'Lake Victoria Basin Cluster',
     regionNote: 'High-burden adolescent health, community scorecards',
   },
   {
     name: 'Siaya',
-    x: 79,
-    y: 462,
-    labelDx: -4,
-    labelDy: -44,
-    labelAnchor: 'middle',
+    // Siaya town centre — WGS84
+    latitude: 0.0607,
+    longitude: 34.288,
+    location: 'Siaya, Siaya County',
     region: 'Lake Victoria Basin Cluster',
     regionNote: 'AYSRYH technical working group & community scorecards',
   },
   {
     name: 'Kilifi',
-    x: 635,
-    y: 863,
-    labelDx: 0,
-    labelDy: 52,
-    labelAnchor: 'middle',
+    // Kilifi town centre — WGS84
+    latitude: -3.63045,
+    longitude: 39.84992,
+    location: 'Kilifi, Kilifi County',
     region: 'Coastal Marine & Climate Corridor',
     regionNote: 'Environmental science, climate justice, and health',
   },
