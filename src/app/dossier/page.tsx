@@ -250,7 +250,7 @@ export default function DossierPage() {
         </div>
       </section>
 
-      {/* ── The 12 Full Champion Dossier Plates ── */}
+      {/* ── Complete Champion Dossier Plates ── */}
       <main className="mx-auto max-w-7xl flex-1 px-4 py-10 sm:px-6 lg:px-16">
         <div className="mb-8 border-b border-line pb-4">
           <p className="caps-label text-terra">Nº 02 — Complete Champion Portfolios</p>

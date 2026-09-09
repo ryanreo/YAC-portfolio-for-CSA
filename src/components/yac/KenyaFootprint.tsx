@@ -313,7 +313,7 @@ export function KenyaFootprint({ onSelect }: { onSelect: (champion: YACProfile) 
           <div className="flex items-center justify-between gap-4">
             <span className="caps-label flex items-center gap-2 text-[9px] text-white/55">
               <span className="h-1 w-1 rounded-full bg-[#a4d0ba]" />
-              12 YACs · 5 counties · WGS84 city-centre references
+              SRHR Youth Champions · 5 counties · WGS84 city-centre references
             </span>
             <span className="caps-label hidden text-[9px] text-white/40 sm:block">Hover a cluster · tap to expand</span>
           </div>
@@ -322,7 +322,7 @@ export function KenyaFootprint({ onSelect }: { onSelect: (champion: YACProfile) 
         <div className="flex flex-col justify-between gap-8 bg-forest p-6 sm:p-8 lg:col-span-4">
           <div>
             <div className="flex items-center justify-between border-b border-white/15 pb-3">
-              <span className="caps-label text-[9px] text-white/60">Sub-National Footprint</span>
+              <span className="caps-label text-[9px] text-white/60">Impact Areas</span>
               <span className="caps-label inline-flex items-center gap-1.5 text-[9px] text-white/60"><span className="h-1 w-1 rounded-full bg-[#a4d0ba]" />Verified</span>
             </div>
             <h3 className="mt-5 font-serif text-2xl leading-[1.25] tracking-[-0.01em] text-white">
