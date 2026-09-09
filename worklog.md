@@ -99,3 +99,19 @@ Stage Summary:
 - The portfolio now speaks the zip's authentic Atelier Editorial language: Newsreader/Manrope, cream/ivory/forest/terracotta, hairline boxes, matted rectangular plates, caps-label metadata, serif italic accents — no gradients, glow circles, or generic AI UI patterns
 - Kenya outline remains the template's exact map asset; single-page structure and 12/12 verified data untouched
 - All flows re-verified end-to-end (desktop, mobile, modal, zero console errors)
+
+---
+Task ID: 5.1
+Agent: Super Z (main agent)
+Task: Deliver higher-quality Kenya map image (user: "can i have image of Kenya so i can Enhance it its really low quality")
+
+Work Log:
+- Located the template's map CDN URL in stitch code.html (lh3.googleusercontent.com/aida-public/AB6AXuDcY2lc...)
+- Appended size params (=s0/=s2048/=w2048); CDN original is 1408x768, 112KB (2.75x linear resolution vs the 512x279 default render previously embedded)
+- Saved original to /home/z/my-project/download/Kenya-map-high-res.jpg for the user's own enhancement
+- Replaced public/kenya/field-nodes.jpg with the 1408x768 original (same crop/aspect 1.833 → pin positions unchanged); verified served asset is 115KB via HTTP 200
+- Browser-verified footprint section: labels (Kampala/Nairobi/Maasai Mara/Dar es Salaam) now crisp, all 5 county pins still aligned
+
+Stage Summary:
+- Site now renders the max-resolution original of the exact template map
+- User has the high-res file in download/ for external enhancement; re-drop over public/kenya/field-nodes.jpg at ~1.833 aspect to swap back in
