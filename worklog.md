@@ -134,3 +134,22 @@ Stage Summary:
 - Stanley's dossier now carries his real, complete biography (zero-inference respected — verbatim source text)
 - Map renders at full photographic quality; portraits of the YACs themselves are now the map pins, each clickable into its portfolio
 - All flows re-verified end-to-end (desktop, mobile, modal, zero console errors)
+
+---
+Task ID: 7
+Agent: Super Z (main agent)
+Task: Fix map pin positioning per user's reference screenshots (Kisumu/Nairobi/Homabay/Kilifi.png): "the positioning is abit off on the map... images showing where the actuall places are"
+
+Work Log:
+- Diagnosed root cause: pins were % of the map PANEL while the base image is cropped differently at every viewport (bg-cover) — pin drift was structural, not tuning
+- Detected city-light blobs on field-nodes.jpg (scipy labeling, 279 blobs) and identified the render's own anchors: Nairobi glow (725,381), Kisumu shore glow (359,416), Mombasa glow (956,478), ENTEBBE/Mwanza/KAMPALA labels; render is a stylized 3D perspective (non-linear graticule), so pins were matched to rendered features + real-world directional relationships instead of a naive lat/lon fit
+- Rewrote KenyaFootprint as a GEO-LOCKED plate: aspect-locked layer (matches image exactly) with pins expressed in image pixel space — identical placement at every viewport; caption strip (coordinates + "Base — East Africa by night") replaces the old floating chip
+- New true positions: Nairobi on its glow; Kilifi on the coastline NE of Mombasa over the Indian Ocean (per user's Kilifi.png); Kisumu on its shore glow; Homa Bay SSW across the water; Siaya NW and north (real relationships per user's Google references)
+- Lake Victoria basin trio is genuinely tight on this render, so added authentic cartography: terracotta anchor dots + white halo rings at true spots with dashed leader lines to offset portrait clusters (Siaya NW, Kisumu W, Homa Bay SW into dark water/border areas); collision-checked at 390/640/1024/1440 (photo sizes h-7/sm-8/lg-9)
+- Cropped template chrome ("Atelier Studio — Selected Works & Practice" + menu icon, top 58px) off the base image — site asset AND download/Kenya-map-high-res.jpg now 1408x710 so the user's enhancement copy matches the site base exactly
+- Verified: bun lint clean; agent-browser — desktop 1440 (east/west zooms: anchors on glows, leaders correct, Kilifi coastal), mobile 390 (clusters distinct, no overlap), Ashleyna pin click → correct modal, zero console errors
+
+Stage Summary:
+- Map pins now sit at the actual places shown in the user's reference images, locked to the image itself so they cannot drift across viewports
+- Template chrome removed from the base map (more authentic, less "AI/template" artifact)
+- The user's enhancement copy (download/Kenya-map-high-res.jpg) is the same cropped 1408x710 base — drop-in replacement safe
