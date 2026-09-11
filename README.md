@@ -1,7 +1,7 @@
-# 🇰🇪 SRHR Youth Advocacy Champions — Digital Portfolio
+# 🇰🇪 SRHR Youth Advocacy Champions: Digital Portfolio
 
 > **Centre for the Study of Adolescence (CSA Kenya) · INSPIRE Lab**  
-> *SRHR Youth Advocacy Champions — turning lived experience into policy evidence.*
+> *SRHR Youth Advocacy Champions: Turning Lived Experience into Policy Evidence.*
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://app.netlify.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)

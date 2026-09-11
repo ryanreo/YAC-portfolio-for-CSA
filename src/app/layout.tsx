@@ -18,9 +18,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SRHR Youth Advocacy Champions — Digital Portfolio | CSA Kenya",
+  title: "SRHR Youth Advocacy Champions: Digital Portfolio | CSA Kenya",
   description:
-    "SRHR Youth Advocacy Champions — Turning lived experience into policy evidence across Kenya. Verified champion profiles, impact areas, and thematic expertise — CSA Kenya • INSPIRE Lab.",
+    "SRHR Youth Advocacy Champions: Turning Lived Experience into Policy Evidence across Kenya. Verified champion profiles, impact areas, and thematic expertise: CSA Kenya · INSPIRE Lab.",
   keywords: [
     "CSA Kenya",
     "Youth Advocacy Champions",
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Centre for the Study of Adolescence (CSA Kenya)" }],
   openGraph: {
-    title: "SRHR Youth Advocacy Champions — Digital Portfolio",
+    title: "SRHR Youth Advocacy Champions: Digital Portfolio",
     description:
-      "SRHR Youth Advocacy Champions — Turning lived experience into policy evidence. Verified profiles, impact areas, and thematic expertise across Kenya.",
-    siteName: "CSA Kenya — INSPIRE Lab",
+      "SRHR Youth Advocacy Champions: Turning Lived Experience into Policy Evidence. Verified profiles, impact areas, and thematic expertise across Kenya.",
+    siteName: "CSA Kenya · INSPIRE Lab",
     type: "website",
   },
 };

@@ -62,7 +62,7 @@ export function ChampionCard({
         <div className="mt-4 border-t border-line pt-3">
           <p className="caps-label flex flex-wrap items-center gap-x-2 gap-y-1 text-[9px] text-ink-soft">
             <span>
-              {champion.county} County — {champion.age} yrs
+              {champion.county} County · {champion.age} yrs
             </span>
             {champion.verified && (
               <span className="inline-flex items-center gap-1 text-forest">

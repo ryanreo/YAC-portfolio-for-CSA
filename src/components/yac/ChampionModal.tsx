@@ -68,8 +68,8 @@ export function ChampionModal({
                       {champion.fullName}
                     </DialogTitle>
                     <DialogDescription className="caps-label mt-4 text-[9px] text-ink-soft">
-                      {champion.county} County — {champion.age} Years
-                      {champion.verified ? ' — Data Verified' : ''}
+                      {champion.county} County · {champion.age} Years
+                      {champion.verified ? ' · Data Verified' : ''}
                     </DialogDescription>
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export function ChampionModal({
                     &ldquo;{champion.impactTagline}&rdquo;
                   </p>
                   <cite className="caps-label mt-3 block text-[9px] not-italic text-ink-soft">
-                    Lived Experience — Policy Impact
+                    Lived Experience &rarr; Policy Impact
                   </cite>
                 </blockquote>
               )}

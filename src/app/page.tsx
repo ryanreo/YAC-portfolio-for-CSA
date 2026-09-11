@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FileText, ShieldCheck } from 'lucide-react';
+import { Download, FileText, ShieldCheck } from 'lucide-react';
 import { ChampionCard } from '@/components/yac/ChampionCard';
 import { ChampionModal } from '@/components/yac/ChampionModal';
 import { KenyaFootprint } from '@/components/yac/KenyaFootprint';
@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-canvas text-ink">
-      {/* ── Masthead — hairline editorial header ── */}
+      {/* ── Masthead: hairline editorial header ── */}
       <header className="no-print sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-16">
           <a href="#top" className="flex items-center gap-3">
@@ -37,15 +37,23 @@ export default function Home() {
             </span>
             <span className="leading-tight">
               <span className="block font-serif text-lg tracking-[-0.01em] text-pine">
-                YAC — Digital Portfolio
+                YAC: Digital Portfolio
               </span>
               <span className="caps-label block text-[9px] text-ink-soft">CSA Kenya · INSPIRE Lab</span>
             </span>
           </a>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
             <span className="caps-label hidden text-[9px] text-ink-soft md:block">
-              Nairobi, Kenya — 2026
+              Nairobi, Kenya · 2026
             </span>
+            <a
+              href="/YAC_Digital_Portfolio_Offline.zip"
+              download
+              className="hidden items-center gap-1.5 rounded-[2px] border border-line bg-canvas px-3 py-1.5 text-[12.5px] font-medium text-pine transition-colors duration-200 hover:bg-ivory sm:inline-flex"
+              title="Download offline package for viewing without internet access"
+            >
+              <Download className="h-3.5 w-3.5" /> Offline ZIP
+            </a>
             <Link
               href="/dossier"
               className="hidden items-center gap-1.5 rounded-[2px] border border-line bg-canvas px-3 py-1.5 text-[12.5px] font-medium text-pine transition-colors duration-200 hover:bg-ivory sm:inline-flex"
@@ -62,26 +70,26 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── Nº 01 — The Cohort ── */}
+      {/* ── Nº 01: The Cohort ── */}
       <section id="top" className="border-b border-line">
         <div className="mx-auto max-w-7xl px-4 pb-14 pt-14 sm:px-6 sm:pb-16 sm:pt-20 lg:px-16">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <div className="fade-up lg:col-span-8">
-              <p className="caps-label text-terra">Nº 01 — The Cohort · Youth Advocacy Champions</p>
+              <p className="caps-label text-terra">Nº 01: The Cohort · Youth Advocacy Champions</p>
               <h1 className="mt-6 max-w-4xl font-serif text-[2.5rem] leading-[1.06] tracking-[-0.03em] text-pine sm:text-6xl lg:text-[4.25rem]">
-                SRHR Youth Advocacy Champions — turning lived experience into{' '}
-                <em className="italic text-terra">policy evidence</em>.
+                SRHR Youth Advocacy Champions: Turning Lived Experience into{' '}
+                <em className="italic text-terra">Policy Evidence</em>.
               </h1>
             </div>
             <div className="fade-up flex flex-col justify-end lg:col-span-4">
               <p className="max-w-md text-[15px] leading-[1.65] text-ink-soft">
                 Legal reform, GIS &amp; spatial data, health communication, grassroots
-                mobilisation — the working portfolios of the Youth Advocacy Champions,
+                mobilisation: the working portfolios of the Youth Advocacy Champions,
                 verified county by county. Open any profile to read it in full.
               </p>
               <p className="caps-label mt-5 flex items-center gap-2 text-[9px] text-ink-soft">
                 <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-forest" aria-hidden="true" />
-                All champion ages &amp; counties verified — zero-inference policy
+                All champion ages &amp; counties verified: zero-inference policy
               </p>
             </div>
           </div>
@@ -106,23 +114,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Nº 02 — The portfolios ── */}
+      {/* ── Nº 02: The Portfolios ── */}
       <main className="flex-1">
         <section
+          id="portfolios"
           aria-label="Champion portfolios"
           className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16"
         >
           <div className="mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-6">
             <div>
-              <p className="caps-label text-terra">Nº 02 — Portfolios</p>
+              <p className="caps-label text-terra">Nº 02: Portfolios</p>
               <h2 className="mt-3 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
                 Selected champions &amp; <em className="italic text-forest">field profiles</em>
               </h2>
             </div>
-            <p className="caps-label text-[9px] text-ink-soft">Cohort Profiles — 2024–2026</p>
+            <p className="caps-label text-[9px] text-ink-soft">Cohort Profiles: 2024–2026</p>
           </div>
 
-          {/* Hairline archive grid — specimen plates */}
+          {/* Hairline archive grid: specimen plates */}
           <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
             {CHAMPIONS.map((c, i) => (
               <ChampionCard key={c.id} champion={c} index={i} onSelect={setSelected} />
@@ -130,16 +139,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Nº 03 — Impact Areas (Excluded from print) ── */}
+        {/* ── Nº 03: Impact Areas (Excluded from print) ── */}
         <section aria-label="Impact areas" className="no-print border-t border-line">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-16">
             <div className="mb-10 max-w-2xl border-b border-line pb-6">
-              <p className="caps-label text-terra">Nº 03 — Impact Areas</p>
+              <p className="caps-label text-terra">Nº 03: Impact Areas</p>
               <h2 className="mt-3 font-serif text-3xl tracking-[-0.02em] text-pine sm:text-4xl">
                 Impact Areas
               </h2>
               <p className="mt-4 max-w-xl text-[15px] leading-[1.65] text-ink-soft">
-                Live cohort distribution across five operational counties — from the Lake
+                Live cohort distribution across five operational counties: from the Lake
                 Victoria basin to the capital&apos;s policy hub and the coastal climate
                 corridor.
               </p>
@@ -163,10 +172,18 @@ export default function Home() {
               />
             </span>
             <p className="font-serif text-base tracking-[-0.01em] text-pine">
-              SRHR Youth Advocacy Champions — Digital Portfolio
+              SRHR Youth Advocacy Champions: Digital Portfolio
             </p>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="/YAC_Digital_Portfolio_Offline.zip"
+              download
+              className="caps-label inline-flex items-center gap-1 text-[9.5px] text-forest underline-offset-4 hover:underline"
+            >
+              <Download className="h-3 w-3" /> Download Offline ZIP
+            </a>
+            <span className="text-ink-soft/40">·</span>
             <Link
               href="/dossier"
               className="caps-label text-[9.5px] text-terra underline-offset-4 hover:underline"

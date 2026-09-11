@@ -55,3 +55,4 @@ server.log
 
 # Archives & Large Artifacts
 *.tar
+offline_dist/

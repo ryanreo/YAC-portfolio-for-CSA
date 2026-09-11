@@ -295,7 +295,7 @@ export function KenyaFootprint({ onSelect }: { onSelect: (champion: YACProfile) 
                           className={`map-fan-member ${cluster.members.length === 1 ? 'map-fan-member--solo' : ''}`}
                           style={memberStyle}
                           onClick={() => onSelect(champion)}
-                          aria-label={`Open ${champion.fullName}'s profile — ${champion.primaryRole}, ${COUNTY_BY_NAME.get(champion.county)?.location}`}
+                          aria-label={`Open ${champion.fullName}'s profile: ${champion.primaryRole}, ${COUNTY_BY_NAME.get(champion.county)?.location}`}
                         >
                           <span className="map-fan-member__avatar">
                             {champion.headshotUrl && <Image src={champion.headshotUrl} alt="" fill sizes="44px" className="object-cover" />}
@@ -344,7 +344,7 @@ export function KenyaFootprint({ onSelect }: { onSelect: (champion: YACProfile) 
             </ul>
           </div>
           <p className="caps-label text-[8.5px] leading-relaxed text-white/40">
-            Regional clusters — Lake Victoria Basin · Capital &amp; National Policy Hub · Coastal Marine &amp; Climate Corridor
+            Regional clusters: Lake Victoria Basin · Capital &amp; National Policy Hub · Coastal Marine &amp; Climate Corridor
           </p>
         </div>
       </div>
